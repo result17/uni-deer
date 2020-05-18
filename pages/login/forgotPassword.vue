@@ -51,7 +51,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .fpw_title_wrapper {
 	text-align: center;
 	margin-top: 20px;

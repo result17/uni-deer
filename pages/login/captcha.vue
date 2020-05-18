@@ -78,7 +78,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .captcha_title {
 	margin-top: 20px;
 	margin-left: 16px;

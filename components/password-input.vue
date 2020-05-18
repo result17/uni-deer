@@ -55,7 +55,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .password_wrapper {
 	position: relative;
 }

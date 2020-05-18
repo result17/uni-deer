@@ -5,7 +5,13 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	state: {
-		isDark: false
+		isDark: false,
+		isLogin: false,
+	},
+	mutations: {
+		login(state) {
+			state.isLogin = true
+		}
 	}
 })
 

@@ -21,7 +21,7 @@
 			<password-input v-model="password" @input-delete="onPasswordDeleteClick"></password-input>
 		</view>
 		<view class="login_btn">
-			<button class="my_btn" type="primary" :disabled="complete">登录</button>
+			<button class="my_btn" type="primary" :disabled="complete" @click="onLoginBtnClick">登录</button>
 			<button class="my_btn" type="primary" @click="onCaptchaBtnClick">验证码登录</button>
 		</view>
 		<view class="login_link">
@@ -60,13 +60,19 @@
 			},
 			onSignUpLinkClick() {
 				uni.navigateTo({
-					url: "./signUp"
+					url: './signUp'
 				})
 			},
 			onFpwBtnClick() {
 				uni.navigateTo({
 					url: './forgotPassword'
 				})
+			},
+			onLoginBtnClick() {
+				uni.navigateTo({
+					url: '../store/store'
+				})
+				this.$store.commit('login')
 			}
 		},
 		computed: {
@@ -77,7 +83,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .login_title {
 	margin-top: 20px;
 	margin-left: 16px;
