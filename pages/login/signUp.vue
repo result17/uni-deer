@@ -1,9 +1,9 @@
 <template>
-	<view class="fpw_page">
-		<view class="fpw_title_wrapper">
-			<span class="fpw_title">重置密码</span>
+	<view class="sign_up_page">
+		<view class="sign_up_title_wrapper">
+			<span class="sign_up_title">开启你的账户</span>
 		</view>
-		<view class="fpw_input">
+		<view class="sign_up_input">
 			<input
 				class="my_input"
 				v-model="account"
@@ -13,7 +13,7 @@
 			<captcha-control v-model="captcha" @input-delete="onInputDelete"></captcha-control>
 			<password-input v-model="password" @input-delete="onPasswordDeleteClick"></password-input>
 		</view>
-		<view class="fpw_btn">
+		<view class="sign_up_btn">
 			<button class="my_btn" type="primary" :disabled="complete">确认</button>
 		</view>
 	</view>
@@ -52,11 +52,11 @@
 </script>
 
 <style lang="scss">
-.fpw_title_wrapper {
+.sign_up_title_wrapper {
 	text-align: center;
 	margin-top: 20px;
 }
-.fpw_title {
+.sign_up_title {
 	font-size: 26px;
 }
 .my_input {
@@ -67,7 +67,7 @@
 .my_btn {
 	margin: 0 5% 6px 5%;
 }
-.fpw_btn {
+.sign_up_btn {
 	margin-top: 20px;
 }
 </style>

@@ -1,16 +1,17 @@
 <template>
-	<view>
+	<view class="captcha_wrapper">
 		<input
 			class="my_input"
-			v-model="captcha"
+			:value="value"
+			@input="$emit('input', $event.target.value)"
 			placeholder="请输入验证码" 
 			placeholder-class="my_placeholder"
 			maxlength="6" />
 		<view 
 			class="captcha_icon_wrapper"
-			v-if="captcha"
+			v-if="value"
 			@click="onCaptchaDeleteClick" >
-			<img width="16" style="marginRight: 8px;" src="../../assets/images/login/qyg_shop_icon_delete.png" />
+			<img width="16" style="marginRight: 8px;" src="../assets/images/login/qyg_shop_icon_delete.png" />
 		</view>
 		<view class="captcha_get_wrapper">
 			<span v-if="hasSentCaptchaReqSec === 0" class="captcha_get_btn" @click="onGetCaptchaBtnClick">{{this.hasSentCaptchaReq ? '重新获取' : '获取验证码'}}</span>
@@ -20,17 +21,27 @@
 </template>
 
 <script>
+	// 父元素relative
 	export default {
-		name: 'captcha-control'
+		name: 'captcha-control',
+		props: {
+			value: String
+		},
+		model: {
+			prop: 'value',
+			event: 'input',
+		},
 		data() {
 			return {
 				hasSentCaptchaReqSec: 0,
 				getCaptchaTimerId: 0,
 				hasSentCaptchaReq: false,
-				showErrorMsg: false
 			};
 		},
-		method: {
+		methods: {
+			onCaptchaDeleteClick() {
+				this.$emit('input-delete')
+			},
 			onGetCaptchaBtnClick() {
 				const context = this
 				this.getCaptchaTimerId = setTimeout(function fn() {
@@ -50,6 +61,9 @@
 </script>
 
 <style lang="scss">
+.captcha_wrapper {
+	position: relative;
+}
 .my_input {
 	margin: 0 16px;
 	min-height: 50px;
@@ -66,5 +80,17 @@
 	position: absolute;
 	right: 24px;
 	bottom: 14px;
+}
+.captcha_get_btn {
+	padding: 3px;
+	border: 1px solid #689EFD;
+	font-size: 12px;
+	color: #689EFD;
+}
+.captcha_sent_btn {
+	color: #FFFFFF;
+	background: #CCCCCC;
+	font-size: 12px;
+	padding: 3px;
 }
 </style>

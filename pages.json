@@ -11,10 +11,14 @@
             "path" : "pages/login/forgotPassword",
             "style" : {}
         }
+        ,{
+            "path" : "pages/login/signUp",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "deer",
+		"navigationBarTitleText": "deer app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}

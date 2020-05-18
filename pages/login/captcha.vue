@@ -12,28 +12,13 @@
 					placeholder-class="my_placeholder"
 					maxlength="15" />
 			</view>
-			<view class="captcha_wrapper">
-				<input
-					class="my_input"
-					v-model="captcha"
-					placeholder="请输入验证码" 
-					placeholder-class="my_placeholder"
-					maxlength="6" />
-				<view 
-					class="captcha_icon_wrapper"
-					v-if="captcha"
-					@click="onCaptchaDeleteClick" >
-					<img width="16" style="marginRight: 8px;" src="../../assets/images/login/qyg_shop_icon_delete.png" />
-				</view>
-				<view class="captcha_get_wrapper">
-					<span v-if="hasSentCaptchaReqSec === 0" class="captcha_get_btn" @click="onGetCaptchaBtnClick">{{this.hasSentCaptchaReq ? '重新获取' : '获取验证码'}}</span>
-					<span v-if="hasSentCaptchaReqSec > 0" class="captcha_sent_btn">已发送{{this.hasSentCaptchaReqSec}}秒</span>
-				</view>
+			<view class="captcha_control_wrapper">
+				<captcha-control v-model="captcha" @input-delete="onInputDelete"></captcha-control>
 			</view>
 		</view>
 		<view class="captcha_tips">
 			<span class="tips_context">
-				提示：未注册账号的手机号，请先<span class="tips_sign_up_link">注册</span>
+				提示：未注册账号的手机号，请先<span class="tips_sign_up_link" @click="onSignUpLinkClick">注册</span>
 			</span>
 		</view>
 		<view class="captcha_btn">
@@ -41,7 +26,7 @@
 			<button class="my_btn" type="primary" @click="onPasswordBtnClick">密码登录</button>
 		</view>
 		<view class="captcha_link">
-			<span class="forgot_password">忘记密码</span>		
+			<span class="forgot_password" @click="onFpwBtnClick">忘记密码</span>		
 		</view>
 		<view v-if="showErrorMsg" class="captcha_msg">
 			<span class="captcha_error_msg">验证码错误</span>
@@ -50,41 +35,38 @@
 </template>
 
 <script>
+	import captchaControl from '../../components/captcha-control.vue'
 	export default {
+		components: {
+			captchaControl
+		},
 		data() {
 			return {
 				account: '',
 				captcha: '',
-				hasSentCaptchaReqSec: 0,
-				getCaptchaTimerId: 0,
-				hasSentCaptchaReq: false,
-				showErrorMsg: false
+				showErrorMsg: false,
 			};
 		},
 		methods: {
-			onCaptchaDeleteClick() {
-				this.captcha = ''
-			},
-			onGetCaptchaBtnClick() {
-				const context = this
-				this.getCaptchaTimerId = setTimeout(function fn() {
-				    this.hasSentCaptchaReq = true
-					if (this.hasSentCaptchaReqSec < 60) {
-						this.hasSentCaptchaReqSec++
-						this.getCaptchaTimerId = setTimeout(fn.bind(context), 1000)
-					} else {
-						clearTimeout(this.getCaptchaTimerId)
-						this.hasSentCaptchaReqSec = 0
-						this.getCaptchaTimerId = 0
-					}
-				}.bind(context), 1000)
-			},
 			onLoginBtnClick() {
 				this.showErrorMsg = true
 			},
 			onPasswordBtnClick() {
 				uni.navigateTo({
 					url: "./login"
+				})
+			},
+			onInputDelete() {
+				this.captcha = ''
+			},
+			onFpwBtnClick() {
+				uni.navigateTo({
+					url: './forgotPassword'
+				})
+			},
+			onSignUpLinkClick() {
+				uni.navigateTo({
+					url: "./signUp"
 				})
 			}
 		},
@@ -102,27 +84,6 @@
 	margin-left: 16px;
 	margin-bottom: 16px;
 	font-size: 26px;
-}
-.captcha_wrapper {
-	position: relative;
-}
-.captcha_icon_wrapper {
-	display: inline-block;
-	position: absolute;
-	right: 90px;
-	bottom: 12px;
-}
-.captcha_get_wrapper {
-	display: inline-block;
-	position: absolute;
-	right: 24px;
-	bottom: 14px;
-}
-.captcha_get_btn {
-	padding: 3px;
-	border: 1px solid #689EFD;
-	font-size: 12px;
-	color: #689EFD;
 }
 .my_input {
 	margin: 0 16px;
@@ -154,12 +115,6 @@
 	margin-bottom: 16px;
 	font-size: 12px;
 	color: #999999;
-}
-.captcha_sent_btn {
-	color: #FFFFFF;
-	background: #CCCCCC;
-	font-size: 12px;
-	padding: 3px;
 }
 .captcha_msg {
 	margin-top: 44px;

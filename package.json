@@ -1,0 +1,15 @@
+{
+  "name": "deer",
+  "version": "1.0.0",
+  "description": "uni-app会在宽萤幕下给html font-size设置96px的字体，导致样式变形。",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "uview-ui": "^1.2.6"
+  }
+}
