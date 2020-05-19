@@ -1,6 +1,12 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
+		    "path" : "pages/order/order",
+		    "style" : {
+				"navigationBarTitleText": "deer"
+			}
+		}
+		,{
 			"path": "pages/login/login"
 		}
         ,{
@@ -25,6 +31,18 @@
             "path" : "pages/shop/verify",
             "style" : {}
         }
+        ,{
+            "path" : "pages/goods/goods",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/stat/stat",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/shopStatus/shopStatus",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -34,5 +52,31 @@
 	},
 	"easycom": {
 		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"tabBar": {
+		"color": "#BFBFBF",
+		"selectedColor": "#4688FA",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/order/order",
+			"text": "订单",
+			"iconPath": "static/imgs/order.png",
+			 "selectedIconPath": "static/imgs/order_on.png"
+		}, {
+			"pagePath": "pages/goods/goods",
+			"text": "商品",
+			"iconPath": "static/imgs/goods.png",
+			"selectedIconPath": "static/imgs/good_on.png"
+		}, {
+			"pagePath":	"pages/stat/stat",
+			"text": "统计",
+			"iconPath":	"static/imgs/line_chart.png",
+			"selectedIconPath":	"static/imgs/line_chart_on.png"
+		}, {
+			"pagePath":	"pages/shopStatus/shopStatus",
+			"text": "店铺",
+			"iconPath":	"static/imgs/shop.png",
+			"selectedIconPath":	"static/imgs/shop_on.png"
+		}]
 	}
 }
