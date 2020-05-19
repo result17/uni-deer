@@ -1,11 +1,11 @@
 <template>
 	<view>
-		<order-title-header :style="{height: limit + 'px'}"></order-title-header>
+		<order-title-header :style="{height: titleHeight + 'px'}" :title-font-size="titleFontSize" :title-margin="titleMargin"></order-title-header>
 		<scroll-view 
+			@touchmove.stop.prevent
 			class="order_scroll_wrapper"
-			upper-threshold="limit"
 			show-scrollbar="false"
-			scroll-y="false"
+			scroll-y="true"
 			@scroll="onUpperScroll">
 			<view class="order_scroll_inner_wrapper">
 				<view class="test">
@@ -18,12 +18,15 @@
 
 <script>
 	import { mapState } from 'vuex'
+	import lodash from 'lodash'
 	import orderTitleHeader from '../../components/order-title-header.vue'
 	
 	export default {
 		data() {
 			return {
-				limit: 98,
+				titleHeight: 98,
+				titleFontSize: 24,
+				titleMargin: '0 0 0 0',
 			};
 		},
 		components: {
@@ -39,14 +42,71 @@
 		},
 		methods: {
 			onUpperScroll(e) {
-				// if (this.limit > 50) {
-				// 	this.limit -= 8
-				// } else {
-				// 	this.limit = 50
-				// }
-				console.log(this.limit)
+				if (this.titleHeight > 50 && !Number.isNaN(e.detail.deltaY) && e.detail.deltaY) {
+					let temp = Math.floor(e.detail.deltaY + this.titleHeight)
+					const oldHeight = this.titleHeight
+					temp = temp > 50 ? temp : 50
+					const tempFs = this.handleTitleFontSize(temp)
+					const tempMargin = this.handleTitleMargin(temp)
+					this.titleFontSize = tempFs
+					this.titleHeight = temp
+					this.titleMargin = tempMargin
+				}
+				return
+			},
+			handleTitleFontSize(height) {
+				let tempFs = 18
+				if (height > 90 && height <= 98) {
+					tempFs = 24
+					return tempFs
+				} else if (height <= 90 && height > 82) {
+					tempFs = 23
+					return tempFs
+				} else if (height <= 90 && height > 82) {
+					tempFs = 22
+					return tempFs
+				} else if (height <= 82 && height > 74) {
+					tempFs = 21
+					return tempFs
+				} else if (height <= 74 && height > 66) {
+					tempFs = 20
+					return tempFs
+				} else if (height <= 66	&& height > 58) {
+					tempFs = 19
+					return tempFs
+				} else if (height >= 58 && height <= 50) {
+					tempFs = 18
+					return tempFs
+				}
+				return tempFs
+			},
+			handleTitleMargin(height) {
+				let tempMargin = 'auto'
+				if (height > 90 && height <= 98) {
+					tempMargin = '0 0 0 0'
+					return tempMargin
+				} else if (height <= 90 && height > 82) {
+					tempMargin = '0 0 0 8%'
+					return tempMargin
+				} else if (height <= 90 && height > 82) {
+					tempMargin = '0 0 0 16%'
+					return tempMargin
+				} else if (height <= 82 && height > 74) {
+					tempMargin = '0 0 1px 24%'
+					return tempMargin
+				} else if (height <= 74 && height > 66) {
+					tempMargin = '0 0 2px 32%'
+					return tempMargin
+				} else if (height <= 66	&& height > 58) {
+					tempMargin = '0 0 3px 40%'
+					return tempMargin
+				} else if (height >= 58 && height <= 50) {
+					tempFs = 'auto'
+					return tempFS
+				}
+				return tempMargin
 			}
-		}
+		},
 	}
 </script>
 
@@ -59,6 +119,6 @@
 }
 .order_scroll_wrapper {
 	width: 100%;
-	height: calc(100vh - 98px - 50px - 44px);
+	height: calc(100vh);
 }
 </style>
