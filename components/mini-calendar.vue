@@ -39,11 +39,10 @@
 .mini_cal_wrapper {
 	display: flex;
 	overflow: hidden;
-	margin: 8px 0;
 	padding: 0 16px;
 	height: 34px;
 	background-color: #FFFFFF;
-	box-shadow: 0 2px 4px 0 rgba(220,231,250,0.50);
+	box-shadow: 0 2px 4px 0 rgba(220, 231, 250, .7);
 }
 .mini_cal_context {
 	width: 100%;

@@ -96,8 +96,9 @@
 	width: calc(100vw - 32px);
 	height: 80px;
 	border-radius: 8px;
-	box-shadow: 0 2px 8px 0 rgba(220,231,250,0.50);
+	box-shadow: 0 2px 8px 0 rgba(220,231,250, .7);
 	background-color: #FFFFFF;
+	margin-bottom: 8px;
 }
 .scroll_view {
 	position: relative;

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view v-for="(item, index) of orderList" :key="index">
+		<view v-for="(item, index) of orderList" :key="index" class="my_order_wrapper">
 			<mini-calendar :year="getDate(index).year" :month="getDate(index).month" :day="getDate(index).day" :count="getOrderCount(index)"></mini-calendar>
 			<my-status-order :status="status" :orderAry="orderList[index].orders"></my-status-order>
 		</view>
@@ -18,12 +18,15 @@
 		},
 		props: {
 			status: String,
+			swiperCurrent: Number,
+			swiperIdx: Number
 		},
 		data() {
 			return {
+				compHeight: 0,
 				orderList: [{
 					date: new Date('2020-04-27').getTime(),
-					orders: Array(3).fill(
+					orders: Array(7).fill(
 						{
 							phone: '15503048888',
 							client: '郭李',
@@ -63,6 +66,16 @@
 			},
 			getOrderCount(index) {
 				return this.orderList[index].orders.length
+			}
+		},
+		mounted() {
+			// 在update时应该也要
+			if (this.swiperIdx === this.swiperCurrent) {
+				let view = uni.createSelectorQuery().in(this).select('.my_order_wrapper')
+				view.boundingClientRect(data => {
+					this.compHeight = data.height
+					this.$emit('change-height', data.height)
+				}).exec()				
 			}
 		}
 	}

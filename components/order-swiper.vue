@@ -8,13 +8,14 @@
 				:current="current"></my-tabs-swiper>
 		</view>
 		<swiper
-			duration="1000"
+			:style="{height: swiperHeight + 'px'}"
+			duration="800"
 			:current="swiperCurrent"
 			@animationfinish="animationfinish">
 			<swiper-item v-for="(item, index) of statusList" :key="index">
-				<view class="test_wrapper">
-					<my-order :status="statusList[index]"></my-order>
-				</view>
+				<scroll-view scroll-y class="scroll_list_wrapper">
+					<my-order @change-height="handleChangeHeight" :status="statusList[index]" :swiperCurrent="swiperCurrent" :swiperIdx="index"></my-order>
+				</scroll-view>
 			</swiper-item>
 		</swiper>
 	</view>
@@ -32,6 +33,8 @@
 		},
 		data() {
 			return {
+				// swiper组件默认高度为150px
+				swiperHeight: 150,
 				statusList: ['newOrder', 'toDelivered', 'toComplete', 'completed', 'canceled'],
 				tabList: [{
 					name: '新订单',
@@ -74,6 +77,10 @@
 			},
 			tabsChange(index) {
 				this.swiperCurrent = index
+			},
+			handleChangeHeight(height) {
+				this.swiperHeight = height
+				console.log(this.swiperHeight)
 			}
 		}
 	}
@@ -88,10 +95,8 @@
 	background-image: url(../assets/images/order/order_bg1.png);
 	background-size: contain;
 }
-.test_wrapper {
+.scroll_list_wrapper {
 	margin: auto;
-	background-color: yellow;
 	width: calc(100vw - 32px);
-	height: 500px;
 }
 </style>

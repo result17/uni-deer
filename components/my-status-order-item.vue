@@ -49,7 +49,10 @@
 	height: auto;
 	background-color: #FFFFFF;
 	font-size: 14px;
-	padding: 16px 16px 0 16px
+	padding: 16px;
+	box-shadow: 0 2px 8px 0 rgba(220, 231, 250, .7);
+	border-radius: 8px;
+	margin-top: 8px;
 }
 .head_wrapper {
 	overflow: hidden;
@@ -61,7 +64,7 @@
 	float: right;
 }
 .phone {
-	margin-right: 8px
+	margin-right: 8px;
 }
 .notPayed {
 	color: #FF4759;
