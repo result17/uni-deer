@@ -1,7 +1,7 @@
 <template>
 	<view class="order_title_header_wrapper">
-		<span :style="{ fontSize: titleFontSize + 'px', margin:  titleMargin}" class="order_title">订单</span>
-		<u-icon class="search_icon" name="search" color="#eeeeee" size="32"></u-icon>
+		<span class="order_title">订单</span>
+		<u-icon class="search_icon" name="search" color="#eeeeee" size="36"></u-icon>
 	</view>
 </template>
 
@@ -14,12 +14,7 @@
 			};
 		},
 		props: {
-			titleFontSize: {
-				type: Number
-			},
-			titleMargin: {
-				type: String
-			}
+			
 		}
 	}
 </script>
@@ -27,20 +22,22 @@
 <style lang="scss" scoped>
 .order_title_header_wrapper {
 	width: 100%;
-	height: 98px;
+	height: 50px;
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	align-items: flex-start;
 	background-image: linear-gradient(-225deg, #5758FA 0%, #5793FA 100%);
-	padding: 0 16px;
 }
 .order_title {
 	display: inline-block;
-	align-self: flex-end;
+	margin: auto;
 	color: #FFFFFF;
-	transition: all .1s ease-in-out;
+	font-size: 18px;
 }
 .search_icon {
-	margin-top: 12px;
+	position: absolute;
+	right: 16px;
+	top: 12px;
 }
 </style>
