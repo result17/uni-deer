@@ -2,7 +2,7 @@
 	<view class="mini_cal_wrapper">
 		<view class="mini_cal_context">
 			<view class="mini_cal_left_wrapper">
-				<img width="14" src="../static/imgs/order/icon_calendar.png" />
+				<image style="width: 14px; height: 14px;" mode="aspectFit" :src="imgSource" />
 				<span class="date_wrapper">{{this.year}}年{{this.month}}月{{this.day}}日</span>
 			</view>
 			<view class="mini_cal_right_wrapper">{{this.count}}单</view>
@@ -15,7 +15,7 @@
 		name: 'mini-calendar',
 		data() {
 			return {
-				
+				imgSource: '../../static/imgs/order/icon_calendar.png'
 			};
 		},
 		props: {

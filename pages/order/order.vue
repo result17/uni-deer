@@ -29,17 +29,12 @@
 			}
 		},
 		methods: {
-			// 
+			
 		},
 	}
 </script>
 
 <style lang="scss" scoped>
-.test {
-	width: 100%;
-	height: 1000px;
-	background-color: yellow;
-}
 .order_scroll_wrapper {
 	width: 100%;
 	height: 100vh;

@@ -8,7 +8,7 @@
 			<view class="head_right_wrapper">
 				<span :class="[order.isPayed ? payClass : notPayClass]">{{order.payMethod}}</span>
 			</view>
-			<view class="fulllAdress">
+			<view class="fullAdress">
 				<span class="area">{{order.area}}</span>
 				<span class="adress">{{order.adress}}</span>
 			</view>
@@ -19,26 +19,49 @@
 				v-for="(item, index) of order.goods" 
 				:key="index" 
 				:goodsName="item.name"
-				:goodsCount="item.count"></goods-item>
+				:goodsCount="item.count">
+			</goods-item>
+			<goods-info :prices="order.prices" :goodsCount="order.goods.length" :orderDate="order.orderTime"></goods-info>
+			<u-line color="#EEEEEE" :hair-line="false"></u-line>
+		</view>
+		<view class="footer_wrapper">
+			<view class="footer_left_wrapper">
+				<u-button :custom-style="customDefaultStyle" shape="square" size="mini">联系客户</u-button>
+			</view>
+			<view class="footer_right_wrapper">
+				<my-status-order-btn :status="status"></my-status-order-btn>
+			</view>
 		</view>
 	</view>
 </template>
 
 <script>
 	import goodsItem from './goods-item.vue'
+	import myStatusOrderBtn from './my-status-order-btn.vue'
+	import goodsInfo from './goods-info.vue'
+	
 	export default {
 		name: 'my-status-order-item',
 		components: {
-			goodsItem
+			goodsItem,
+			myStatusOrderBtn,
+			goodsInfo
 		},
 		data() {
 			return {
 				payClass: 'payed',
-				notPayClass: 'notPayed'
+				notPayClass: 'notPayed',
+				customDefaultStyle: {
+					backgroundColor: '#F6F6F6',
+					borderRadius: '4px',
+					color: '#333333',
+					fontSize: '12px',
+				},
 			};
 		},
 		props: {
-			order: Object
+			order: Object,
+			status: String,
 		}
 	}
 </script>
@@ -54,13 +77,17 @@
 	border-radius: 8px;
 	margin-top: 8px;
 }
-.head_wrapper {
+.head_wrapper, .footer_wrapper {
 	overflow: hidden;
 }
-.head_left_wrapper {
+.footer_left_wrapper {
 	float: left;
 }
-.head_right_wrapper {
+.head_left_wrapper {
+	@extend .footer_left_wrapper;
+	margin-bottom: 8px;
+}
+.head_right_wrapper, .footer_right_wrapper {
 	float: right;
 }
 .phone {
@@ -73,7 +100,7 @@
 .payed {
 	font-size: 12px;
 }
-.fulllAdress {
+.fullAdress {
 	clear: both;
 	font-size: 12px;
 	color: #999999;

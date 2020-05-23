@@ -1,6 +1,6 @@
 <template>
-	<view>
-		<span class="goodsItem">{{goodsName}}</span>
+	<view class="goods_wrapper">
+		<span class="goods_item">{{goodsName}}</span>
 		<span class="goodsCount">x{{goodsCount}}</span>
 	</view>
 </template>
@@ -16,12 +16,15 @@
 </script>
 
 <style lang="scss">
-.goodsItem {
+.goods_wrapper {
+	margin-top: 8px;
+}
+.goods_item {
 	margin-right: 8px;
 	font-size: 12px;
 	color: #333333;
 }
-.goodsCount {
+.goods_count {
 	color: #999999;
 	font-size: 12px;
 }

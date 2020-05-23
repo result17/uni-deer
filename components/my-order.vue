@@ -49,10 +49,38 @@
 								}
 							],
 							prices: 20,
-							orderDate: new Date('2020-04-20').getTime()
-						}
+							orderTime: new Date('2020/04/20 10:10:10').getTime()
+						},
 					),
-				}]
+				}, {
+					date: new Date('2020-04-28').getTime(),
+					orders: Array(7).fill(
+						{
+							phone: '15503048888',
+							client: '郭李',
+							isPayed: true,
+							payMethod: '货到付款',
+							area: '西安雁塔区',
+							adress: '鱼化寨街道唐兴路唐兴数码3楼318',
+							goods: [
+								{
+									name: '清凉一度抽纸',
+									count: 1
+								},
+								{
+									name: '八月十五中秋团圆月饼',
+									count: 1
+								},
+								{
+									name: '百草味团圆大礼包',
+									count: 1
+								}
+							],
+							prices: 20,
+							orderTime: new Date('2020/04/20 10:10:10').getTime()
+						}
+					)
+				 }]
 			};
 		},
 		methods: {
@@ -71,10 +99,13 @@
 		mounted() {
 			// 在update时应该也要
 			if (this.swiperIdx === this.swiperCurrent) {
-				let view = uni.createSelectorQuery().in(this).select('.my_order_wrapper')
-				view.boundingClientRect(data => {
-					this.compHeight = data.height
-					this.$emit('change-height', data.height)
+				let view = uni.createSelectorQuery().in(this).selectAll('.my_order_wrapper')
+				view.boundingClientRect(dataList => {
+					this.compHeight = dataList.reduce((acc, cur) => {
+						acc += cur.height
+						return acc
+					}, 0)
+					this.$emit('change-height', this.compHeight)
 				}).exec()				
 			}
 		}

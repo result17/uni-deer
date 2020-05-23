@@ -1,15 +1,17 @@
 <template>
 	<view>
-		<view class="order_swiper_wrapper">
-			<my-tabs-swiper 
-				:list="tabList" 
-				ref="myTabs" 
-				@change="tabsChange"
-				:current="current"></my-tabs-swiper>
-		</view>
+		<u-sticky>
+			<view class="order_swiper_wrapper">
+				<my-tabs-swiper 
+					:list="tabList" 
+					ref="myTabs" 
+					@change="tabsChange"
+					:current="current"></my-tabs-swiper>
+			</view>
+		</u-sticky>
 		<swiper
 			:style="{height: swiperHeight + 'px'}"
-			duration="800"
+			duration="400"
 			:current="swiperCurrent"
 			@animationfinish="animationfinish">
 			<swiper-item v-for="(item, index) of statusList" :key="index">
@@ -39,28 +41,28 @@
 				tabList: [{
 					name: '新订单',
 					count: 10,
-					iconPath: '../static/imgs/order/xdd_n.png',
-					selectedIconPath: '../static/imgs/order/xdd_s.png'
+					iconPath: '../../static/imgs/order/xdd_n.png',
+					selectedIconPath: '../../static/imgs/order/xdd_s.png'
 				}, {
 					name: '待配送',
 					count: 10,
-					iconPath: '../static/imgs/order/dps_n.png',
-					selectedIconPath: '../static/imgs/order/dps_s.png',
+					iconPath: '../../static/imgs/order/dps_n.png',
+					selectedIconPath: '../../static/imgs/order/dps_s.png',
 				}, {
 					name: '待完成',
 					count: 10,
-					iconPath: '../static/imgs/order/dwc_n.png',
-					selectedIconPath: '../static/imgs/order/dwc_s.png',
+					iconPath: '../../static/imgs/order/dwc_n.png',
+					selectedIconPath: '../../static/imgs/order/dwc_s.png',
 				}, {
 					name: '已完成',
 					count: 0,
-					iconPath: '../static/imgs/order/ywc_n.png',
-					selectedIconPath: '../static/imgs/order/ywc_s.png',
+					iconPath: '../../static/imgs/order/ywc_n.png',
+					selectedIconPath: '../../static/imgs/order/ywc_s.png',
 				}, {
 					name: '已取消',
 					count: 0,
-					iconPath: '../static/imgs/order/yqx_n.png',
-					selectedIconPath: '../static/imgs/order/yqx_s.png',
+					iconPath: '../../static/imgs/order/yqx_n.png',
+					selectedIconPath: '../../static/imgs/order/yqx_s.png',
 				}],
 				// 因为内部的滑动机制限制，请将tabs组件和swiper组件的current用不同变量赋值
 				current: 0,// tabs组件的current值，表示当前活动的tab选项
@@ -80,7 +82,6 @@
 			},
 			handleChangeHeight(height) {
 				this.swiperHeight = height
-				console.log(this.swiperHeight)
 			}
 		}
 	}
