@@ -43,6 +43,10 @@
             "path" : "pages/shopStatus/shopStatus",
             "style" : {}
         }
+        ,{
+            "path" : "pages/orderDetail/orderDetail",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
