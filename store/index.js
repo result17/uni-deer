@@ -7,10 +7,14 @@ const store = new Vuex.Store({
 	state: {
 		isDark: false,
 		isLogin: false,
+		showPayMethodsList: false,
 	},
 	mutations: {
 		login(state) {
 			state.isLogin = true
+		},
+		changeShowPayMethodsList(state) {
+			state.showPayMethodsList = !state.showPayMethodsList
 		}
 	}
 })

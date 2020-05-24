@@ -1,7 +1,10 @@
 <template>
-	<view>
+	<view >
 		<order-title-header></order-title-header>
 		<order-swiper></order-swiper>
+		<view @mousewheel.stop.prevent></my-popup-action-list>>
+			<my-popup-action-list v-if="showPayMethodsList" @touchmove.stop.prevent></my-popup-action-list>
+		</view>
 	</view>
 </template>
 
@@ -9,6 +12,7 @@
 	import { mapState } from 'vuex'
 	import orderTitleHeader from '../../components/order-title-header.vue'
 	import orderSwiper from '../../components/order-swiper.vue'
+	import myPopupActionList from '../../components/my-popup-action-list.vue'
 	
 	export default {
 		data() {
@@ -18,9 +22,12 @@
 		},
 		components: {
 			orderTitleHeader,
-			orderSwiper
+			orderSwiper,
+			myPopupActionList,
 		},
-		computed: mapState(['isLogin']),
+		computed: {
+			...mapState(['isLogin', 'showPayMethodsList']),
+		},
 		onLoad() {
 			if (this.isLogin) {
 				uni.reLaunch({
@@ -29,7 +36,11 @@
 			}
 		},
 		methods: {
-			
+			onScroll(event) {
+				event.preventDefault()
+				event.stopPropagation()
+				return true
+			}
 		},
 	}
 </script>

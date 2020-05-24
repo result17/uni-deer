@@ -240,7 +240,6 @@
 				this.showScope = true
 			},
 			onScopeActionSheetClick(index) {
-				console.log(this.scopeList[index].text)
 				this.mainScope = this.scopeList[index].text
 			},
 			onVerifyBtnClick() {

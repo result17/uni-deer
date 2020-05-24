@@ -39,16 +39,19 @@
 	import goodsItem from './goods-item.vue'
 	import myStatusOrderBtn from './my-status-order-btn.vue'
 	import goodsInfo from './goods-info.vue'
+	// import myPopupActionList from './my-popup-action-list.vue'
 	
 	export default {
 		name: 'my-status-order-item',
 		components: {
 			goodsItem,
 			myStatusOrderBtn,
-			goodsInfo
+			goodsInfo,
+			// myPopupActionList
 		},
 		data() {
 			return {
+				actionListShow: false,
 				payClass: 'payed',
 				notPayClass: 'notPayed',
 				customDefaultStyle: {
@@ -56,7 +59,7 @@
 					borderRadius: '4px',
 					color: '#333333',
 					fontSize: '12px',
-				},
+				}
 			};
 		},
 		props: {

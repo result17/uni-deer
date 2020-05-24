@@ -5,6 +5,7 @@
 			size="mini"
 			:custom-style="item.type === 'default' ? customDefaultStyle : customPrimaryStyle"
 			v-for="(item, index) of statusBtn[status]"
+			@click="item.onClick"
 			:key="index"
 			:style="{'margin-right': (statusBtn[status].length > 1 && index !== statusBtn[status].length - 1 ? '8px': '0')}"
 			:type="item.type">{{item.context}}</u-button>
@@ -12,6 +13,8 @@
 </template>
 
 <script>
+	import { mapMutations } from 'vuex'
+	
 	export default {
 		name: 'my-status-order-btn',
 		props: {
@@ -33,36 +36,59 @@
 				statusBtn: {
 					newOrder: [{
 						type: 'default',
-						context: '拒单'
+						context: '拒单',
+						onClick: this.onClick
 					},
 					{
 						type: 'primary',
-						context: '接单'
+						context: '接单',
+						onClick: this.onClick
 					}],
 					toDelivered: [{
 						type: 'default',
-						context: '拒单'
+						context: '拒单',
+						onClick: this.onUseLessClick
 					}, {
 						type: 'primary',
-						context: '开始配送'
+						context: '开始配送',
+						onClick: this.onUseLessClick
 					}],
 					toComplete: [{
 						type: 'default',
-						context: '订单跟踪'
+						context: '订单跟踪',
+						onClick: this.onOrderTrackBtnClick
 					}, {
 						type: 'primary',
-						context: '完成配送'
+						context: '完成配送',
+						onClick: this.onPayMethodsBtnClick
 					}],
 					completed: [{
 						type: 'default',
-						context: '订单跟踪'
+						context: '订单跟踪',
+						onClick: this.onOrderTrackBtnClick
 					}],
 					canceled: [{
 						type: 'default',
-						context: '订单跟踪'
+						context: '订单跟踪',
+						onClick: this.onOrderTrackBtnClick
 					}]
 				}
 			};
+		},
+		methods: {
+			...mapMutations(['changeShowPayMethodsList']),
+			onClick() {
+				console.log('click')
+			},
+			onUseLessClick() {
+				console.log('useless')
+			},
+			onPayMethodsBtnClick() {
+				this.changeShowPayMethodsList()
+			},
+			onOrderTrackBtnClick() {
+				console.log('track')
+			}
 		}
 	}
 </script>
