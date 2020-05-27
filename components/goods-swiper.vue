@@ -13,11 +13,13 @@
 					<goods-list-item
 						v-for="(item, index) of onSaleList"
 						:key="index"
+						:idx="index"
 						:imgUrl="item.imgUrl"
 						:cost="item.cost"
 						:tags="item.tags"
 						:name="item.name"
 						:type="item.type"
+						@delete="onDeleteOnSaleItem"
 					></goods-list-item>
 				</view>
 			</swiper-item>
@@ -26,11 +28,13 @@
 					<goods-list-item
 						v-for="(item, index) of toSaleList"
 						:key="index"
+						:idx="index"
 						:imgUrl="item.imgUrl"
 						:cost="item.cost"
 						:tags="item.tags"
 						:name="item.name"
 						:type="item.type"
+						@delete="onDeleteToSaleItem"
 					></goods-list-item>
 				</view>
 			</swiper-item>
@@ -39,11 +43,13 @@
 					<goods-list-item
 						v-for="(item, index) of offSaleList"
 						:key="index"
+						:idx="index"
 						:imgUrl="item.imgUrl"
 						:cost="item.cost"
 						:tags="item.tags"
 						:name="item.name"
 						:type="item.type"
+						@delete="onDeleteOffSaleItem"
 					></goods-list-item>
 				</view>
 			</swiper-item>
@@ -120,9 +126,30 @@
 				let view = uni.createSelectorQuery().in(this).selectAll('.goods_list_wrapper')
 				view.boundingClientRect(dataList => {
 					for (let i = 0; i < dataList.length; ++i) {
-						this.swiperHegithList.push(dataList[i].height)
+						this.swiperHegithList[i] === undefined ? this.swiperHegithList.push(dataList[i].height) : this.$set(this.swiperHegithList, i, dataList[i].height)
 					}
 				}).exec()
+			},
+			onDeleteOnSaleItem(idx) {
+				this.onSaleList[idx].status = 'delete'
+				this.$nextTick(function(){
+					this.getSwipetItemHeight()
+					this.swiperHeight = this.swiperHegithList[0]
+				})
+			},
+			onDeleteToSaleItem(idx) {
+				this.toSaleList[idx].status = 'delete'
+				this.$nextTick(function(){
+					this.getSwipetItemHeight()
+					this.swiperHeight = this.swiperHegithList[1]
+				})
+			},
+			onDeleteOffSaleItem(idx) {
+				this.offSaleList[idx].status = 'delete'
+				this.$nextTick(function(){
+					this.getSwipetItemHeight()
+					this.swiperHeight = this.swiperHegithList[2]
+				})
 			}
 		}
 	}
