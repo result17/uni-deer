@@ -47,6 +47,10 @@
             "path" : "pages/orderDetail/orderDetail",
             "style" : {}
         }
+        ,{
+            "path" : "pages/orderTrack/orderTrack",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

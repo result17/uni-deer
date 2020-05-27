@@ -87,7 +87,9 @@
 				this.changeShowPayMethodsList()
 			},
 			onOrderTrackBtnClick() {
-				console.log('track')
+				uni.navigateTo({
+					url: '/pages/orderTrack/orderTrack'
+				})
 			}
 		}
 	}

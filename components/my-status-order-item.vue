@@ -1,5 +1,5 @@
 <template>
-	<view class="status_order_item_wrapper">
+	<view class="status_order_item_wrapper" @click="onOrderItemClick">
 		<view class="head_wrapper">
 			<view class="head_left_wrapper">
 				<span class="phone">{{order.phone}}</span>
@@ -65,6 +65,13 @@
 		props: {
 			order: Object,
 			status: String,
+		},
+		methods: {
+			onOrderItemClick() {
+				uni.navigateTo({
+					url: '/pages/orderDetail/orderDetail',
+				})
+			}
 		}
 	}
 </script>
