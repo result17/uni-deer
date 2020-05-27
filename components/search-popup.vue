@@ -12,7 +12,7 @@
 			:action-style='searchBtnStyle'
 			class="search-wrapper" 
 			shape="square" 
-			placeholder="时间关键字查询"
+			:placeholder="placeholder"
 			placeholder-color="#CCCCCC"
 			v-model="keyWord"></u-search>
 	</u-popup>
@@ -35,7 +35,8 @@
 			};
 		},
 		props: {
-			show: Boolean
+			show: Boolean,
+			placeholder: String
 		},
 		model: {
 			prop: 'show',

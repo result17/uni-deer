@@ -1,8 +1,9 @@
 <template>
 	<view class="goods_page_wrapper">
 		<view class="top_icons_wrapper">
-			<u-icon :style="{marginRight: '24px'}"color="#333333" size="40" name="search"></u-icon>
+			<u-icon :style="{marginRight: '24px'}" color="#333333" size="40" name="search" @click="onSearchIconClick"></u-icon>
 			<u-icon color="#333333" size="40" name="plus"></u-icon>
+			<search-popup :placeholder="placeholder" v-model="showSearchPopup"></search-popup>
 		</view>
 		<view class="goods_selected_wrapper">
 			<view class="selected_category_wrapper">
@@ -36,15 +37,19 @@
 
 <script>
 	import goodsSwiper from '../../components/goods-swiper.vue'
+	import searchPopup from '../../components/search-popup.vue'
 	
 	export default {
 		components: {
-			goodsSwiper
+			goodsSwiper,
+			searchPopup
 		},
 		data() {
 			return {
 				showCategoryList: false,
+				showSearchPopup: false,
 				selectedCategoryId: 0,
+				placeholder: '请输入商品名称查询',
 				categoryList: [{
 					category: '全部商品',
 					id: 0
@@ -72,7 +77,7 @@
 				}, {
 					category: '家庭护理',
 					id: 8
-				}],
+				}]
 			};
 		},
 		methods: {
@@ -84,6 +89,9 @@
 			},
 			onCategoryBtnClick() {
 				this.showCategoryList = true
+			},
+			onSearchIconClick() {
+				this.showSearchPopup = true
 			}
 		}
 	}

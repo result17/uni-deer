@@ -54,6 +54,13 @@
 				</view>
 			</swiper-item>
 		</swiper>
+		<u-action-sheet
+			class="sheet"
+			:list="sheetList"
+			:tips="tips"
+			@click="onSheetClick"
+			@cancel="onSheetCancel"
+			v-model="showActionSheet"></u-action-sheet>
 	</view>
 </template>
 
@@ -79,7 +86,21 @@
 				swiperCurrent: -1,
 				goodsList: [],
 				swiperHegithList: [],
-				swiperHeight: 150
+				swiperHeight: 150,
+				sheetList: [{
+					text: '确认删除',
+					color: '#FF4759',
+					fontSize: '18px'
+				}],
+				showActionSheet: false,
+				tips: {
+					text: '是否确认删除， 防止错误操作',
+					color: '#999999',
+					fontSize: '18px'
+				},
+				willDeleteListName: '',
+				willDeleteListId: -1,
+				willDeleteListItemIdx: -1,
 			};
 		},
 		mounted() {
@@ -131,25 +152,38 @@
 				}).exec()
 			},
 			onDeleteOnSaleItem(idx) {
-				this.onSaleList[idx].status = 'delete'
-				this.$nextTick(function(){
-					this.getSwipetItemHeight()
-					this.swiperHeight = this.swiperHegithList[0]
-				})
+				this.showActionSheet = true
+				this.willDeleteListName = 'onSaleList'
+				this.willDeleteListId = 0
+				this.willDeleteListItemIdx = idx
 			},
 			onDeleteToSaleItem(idx) {
-				this.toSaleList[idx].status = 'delete'
-				this.$nextTick(function(){
-					this.getSwipetItemHeight()
-					this.swiperHeight = this.swiperHegithList[1]
-				})
+				this.showActionSheet = true
+				this.willDeleteListName = 'toSaleList'
+				this.willDeleteListId = 1
+				this.willDeleteListItemIdx = idx
 			},
 			onDeleteOffSaleItem(idx) {
-				this.offSaleList[idx].status = 'delete'
+				this.showActionSheet = true
+				this.willDeleteListName = 'offSaleList'
+				this.willDeleteListId = 2
+				this.willDeleteListItemIdx = idx
+			},
+			onSheetClick() {
+				this[this.willDeleteListName][this.willDeleteListItemIdx].status = 'deleted'
+				const id = this.willDeleteListId
+				// 异步
 				this.$nextTick(function(){
 					this.getSwipetItemHeight()
-					this.swiperHeight = this.swiperHegithList[2]
+					this.swiperHeight = this.swiperHegithList[id]
 				})
+				// 恢复
+				this.onSheetCancel()
+			},
+			onSheetCancel() {
+				this.willDeleteListName = ''
+				this.willDeleteListItemIdx = -1
+				this.willDeleteListId = -1
 			}
 		}
 	}

@@ -2,7 +2,7 @@
 	<view class="order_title_header_wrapper" @mousewheel.stop.prevent>
 		<span class="order_title">订单</span>
 		<u-icon class="search_icon" name="search" color="#eeeeee" size="36" @click="onSearchIconClick"></u-icon>
-		<search-popup v-model="showPopUp"></search-popup>
+		<search-popup :placeholder="placeholder" v-model="showPopUp"></search-popup>
 	</view>
 </template>
 
@@ -17,7 +17,8 @@
 		},
 		data() {
 			return {
-				showPopUp: false
+				showPopUp: false,
+				placeholder: '时间关键字查询'
 			};
 		},
 		methods: {
