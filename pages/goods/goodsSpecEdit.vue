@@ -75,11 +75,9 @@
 			},
 			onOpen(idx) {
 				this.$set(this.showEditItem, idx, true)
-				console.log(this.showEditItem)
 			},
 			onClose(idx) {
 				this.$set(this.showEditItem, idx, false)
-				console.log(this.showEditItem)
 			}
 		},
 		mounted() {

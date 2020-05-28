@@ -134,7 +134,11 @@
 			onGoodsTypeIconClick() {
 				this.showPicker = true
 			},
-			onGoodsSpecIconClick() {},
+			onGoodsSpecIconClick() {
+				uni.navigateTo({
+					url: './goodsSpecEdit'
+				})
+			},
 			onPickerConfirm(idx) {
 				this.goodsType = this.selectorTypeList[idx]
 			}

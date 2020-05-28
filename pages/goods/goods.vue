@@ -2,7 +2,7 @@
 	<view class="goods_page_wrapper">
 		<view class="top_icons_wrapper">
 			<u-icon :style="{marginRight: '24px'}" color="#333333" size="40" name="search" @click="onSearchIconClick"></u-icon>
-			<u-icon color="#333333" size="40" name="plus"></u-icon>
+			<u-icon color="#333333" size="40" name="plus" @click="onPlusIconClick"></u-icon>
 			<search-popup :placeholder="placeholder" v-model="showSearchPopup"></search-popup>
 		</view>
 		<view class="goods_selected_wrapper">
@@ -92,6 +92,11 @@
 			},
 			onSearchIconClick() {
 				this.showSearchPopup = true
+			},
+			onPlusIconClick() {
+				uni.navigateTo({
+					url: './goodsEdit'
+				})
 			}
 		}
 	}

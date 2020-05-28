@@ -110,7 +110,9 @@
 				this.show = true
 			},
 			onEditBtnClick() {
-				console.log('edit')
+				uni.navigateTo({
+					url: './goodsEdit',
+				})
 			},
 			onOffSaleBtnClick() {
 				console.log('offSale')
@@ -118,7 +120,7 @@
 			onDeleteBtnClick() {
 				this.$emit('delete', this.idx)
 			}
-		}
+		},
 	}
 </script>
 

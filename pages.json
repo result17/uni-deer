@@ -52,11 +52,11 @@
             "style" : {}
         }
         ,{
-            "path" : "pages/goodsEdit/goodsEdit",
+            "path" : "pages/goods/goodsEdit",
             "style" : {}
         }
         ,{
-            "path" : "pages/goodsSpecEdit/goodsSpecEdit",
+            "path" : "pages/goods/goodsSpecEdit",
             "style" : {}
         }
     ],
