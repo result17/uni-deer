@@ -43,12 +43,20 @@
             "path" : "pages/orderDetail/orderDetail",
             "style" : {}
         }
+		,{
+			"path" : "pages/shopStatus/shopStatus",
+			"style": {}
+		}
         ,{
             "path" : "pages/orderTrack/orderTrack",
             "style" : {}
         }
         ,{
             "path" : "pages/goodsEdit/goodsEdit",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/goodsSpecEdit/goodsSpecEdit",
             "style" : {}
         }
     ],
