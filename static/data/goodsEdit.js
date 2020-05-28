@@ -1,6 +1,7 @@
 export default {
   goods: [
     {
+      deleted: false,
       name: '黑色',
       cost: 50,
       imgUrl: '../../static/imgs/goods/goods_size_1.png',
@@ -18,6 +19,7 @@ export default {
       }]
     },
     {
+      deleted: false,
       name: '银色',
       cost: 60,
       imgUrl: '../../static/imgs/goods/goods_size_2.png',
@@ -31,6 +33,7 @@ export default {
       }]
     },
     {
+      deleted: false,
       name: '黑色',
       cost: 50,
       imgUrl: '../../static/imgs/goods/goods_size_1.png',
@@ -48,6 +51,7 @@ export default {
       }]
     },
     {
+      deleted: false,
       name: '银色',
       cost: 60,
       imgUrl: '../../static/imgs/goods/goods_size_2.png',
@@ -74,6 +78,7 @@ export default {
       }]
     }, 
     {
+      deleted: false,
       name: '银色',
       cost: 60,
       imgUrl: '../../static/imgs/goods/goods_size_2.png',
@@ -87,6 +92,7 @@ export default {
       }]
     },
     {
+      deleted: false,
       name: '黑色',
       cost: 50,
       imgUrl: '../../static/imgs/goods/goods_size_1.png',
@@ -103,6 +109,7 @@ export default {
 				color: '#FFFFFF'
       }]
     }, {
+      deleted: false,
       name: '黑色',
       cost: 50,
       imgUrl: '../../static/imgs/goods/goods_size_1.png',

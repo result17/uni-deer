@@ -20,6 +20,12 @@
 				:money="item.money"
 				:tags="item.tags"
 				:amount="item.amount"
+				:show="showEditItem[index]"
+				:options="options"
+				:index="index"
+				@delete="onDelete"
+				@open="onOpen"
+				@close="onClose"
 			></goods-edit-item>
 		</view>
 		<u-modal v-model="showModal" :title="modelTitle" :content-slot="true" :mask-close-able="true" :content-style="modalContentStyle" :show-cancel-button="true">
@@ -47,17 +53,39 @@
 				modalContentStyle: {
 					margin: '16px'
 				},
-				goodsList: []
+				goodsList: [],
+				showEditItem: [],
+				options: [
+					{
+						text: '删除',
+						style: {
+							backgroundColor: '#dd524d'
+						}
+					}
+				]
 			};
 		},
 		methods: {
 			onEditWrapperClick() {
 				this.showModal = true
+			},
+			onDelete(idx) {
+				this.goodsList.splice(idx, 1)
+				this.showEditItem.splice(idx, 1)
+			},
+			onOpen(idx) {
+				this.$set(this.showEditItem, idx, true)
+				console.log(this.showEditItem)
+			},
+			onClose(idx) {
+				this.$set(this.showEditItem, idx, false)
+				console.log(this.showEditItem)
 			}
 		},
 		mounted() {
 			for (const goods of data.goods) {
 				this.goodsList.push(goods)
+				this.showEditItem.push(false)
 			}
 		}
 	}

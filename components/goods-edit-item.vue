@@ -1,38 +1,40 @@
 <template>
 	<view class="goods_edit_item_wrapper">
-		<u-row class="row_wrapper">
-			<u-col class="goods_img_wrapper" span="3">
-				<image style="width: 72px; height: 72px;" :src="imgUrl" mode="aspectFill"></image>
-			</u-col>
-			<u-col span="5" class="goods_edit_content_wrapper">
-				<view class="goods_name">{{name}}</view>
-				<view class="goods_tags_wrapper">
-					<u-tag
-						v-for="(item, index) of tags"
-						:style="{marginRight: index === tags.length - 1 ? '0' : '6px', fontSize: '10px'}"
-						type="info"
-						:key="index" 
-						:text="item.text"
-						mode="dark"
-						size="mini"
-						:color="item.color"
-						:bg-color="item.bgColor"></u-tag>
-				</view>
-				<view class="goods_cost">
-					￥{{cost}}
-				</view>
-			</u-col>
-			<u-col class="goods_money_wrapper" span="2">
-				<view class="money">
-				佣金{{money}}元
-				</view>
-			</u-col>
-			<u-col class="goods_amount_wrapper" span="2">
-				<view class="amount">库存：{{amount}}件</view>
-				<view class="minBuyNum">起购{{minBuyNum}}件</view>
-			</u-col>
-		</u-row>
-		<u-line class="divder"></u-line>
+		<u-swipe-action :show="show" :options="options" @click="onSwipeActionDelBtnClick" @open="onOpen" @close="onClose">
+			<u-row class="row_wrapper">
+				<u-col class="goods_img_wrapper" span="3">
+					<image style="width: 72px; height: 72px;" :src="imgUrl" mode="aspectFill"></image>
+				</u-col>
+				<u-col span="5" class="goods_edit_content_wrapper">
+					<view class="goods_name">{{name}}</view>
+					<view class="goods_tags_wrapper">
+						<u-tag
+							v-for="(item, index) of tags"
+							:style="{marginRight: index === tags.length - 1 ? '0' : '6px', fontSize: '10px'}"
+							type="info"
+							:key="index" 
+							:text="item.text"
+							mode="dark"
+							size="mini"
+							:color="item.color"
+							:bg-color="item.bgColor"></u-tag>
+					</view>
+					<view class="goods_cost">
+						￥{{cost}}
+					</view>
+				</u-col>
+				<u-col class="goods_money_wrapper" span="2">
+					<view class="money">
+					佣金{{money}}元
+					</view>
+				</u-col>
+				<u-col class="goods_amount_wrapper" span="2">
+					<view class="amount">库存：{{amount}}件</view>
+					<view class="minBuyNum">起购{{minBuyNum}}件</view>
+				</u-col>
+			</u-row>
+			<u-line class="divder"></u-line>
+		</u-swipe-action>
 	</view>
 </template>
 
@@ -51,7 +53,21 @@
 			minBuyNum: Number,
 			amount: Number,
 			money: Number,
-			tags: Array
+			tags: Array,
+			show: Boolean,
+			options: Array,
+			index: Number
+		},
+		methods: {
+			onSwipeActionDelBtnClick() {
+				this.$emit('delete', this.index)
+			},
+			onOpen() {
+				this.$emit('open', this.index)
+			},
+			onClose() {
+				this.$emit('close', this.index)
+			}
 		}
 	}
 </script>
