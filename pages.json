@@ -59,6 +59,14 @@
             "path" : "pages/goods/goodsSpecEdit",
             "style" : {}
         }
+        ,{
+            "path" : "pages/stat/statToDelived",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/demo/demo",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
