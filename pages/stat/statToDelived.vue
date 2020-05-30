@@ -17,21 +17,124 @@
 			</span>
 			<u-line direction="col"></u-line>
 		</view>
-		<view class="ring_chart_wrappre">
+		<view class="ring_chart_wrapper">
 			<my-ring-chart></my-ring-chart>
+		</view>
+		<view class="goods_rank_wrapper">
+			<view class="goods_rank_title_wrappr">
+				热销商品排行
+			</view>
+			<view class="goods_rank_content_wrapper">
+				<goods-rank-item
+					v-for="(item, index) of goodsList"
+					:key="Number(index)"
+					:index="index"
+					:color="item.color"
+					:bg-color="item.bgColor"
+					:img-url="item.imgUrl"
+					:name="item.name"
+					:sub="item.sub"
+					:not-pay-num="item.notPayNum"
+					:pay-num="item.notPayNum"
+				></goods-rank-item>
+			</view>
 		</view>
 	</view>
 </template>
 
 <script>
 	import myRingChart from '@/components/my-ring-chart.vue'
+	import goodsRankItem from '@/components/goods-rank-item.vue'
+	 
 	export default {
 		components: {
-			myRingChart
+			myRingChart,
+			goodsRankItem
 		},
 		data() {
 			return {
-				date: new Date()
+				date: new Date(),
+				goodsList: [{
+					color: '#FFFFFF',
+					bgColor: '#FFD147',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 400,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#CEE6F2',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 100,
+					payNum: 400,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#FFAA80',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 200,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#7087FA',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 200,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#A0E65C',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 200,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#5CE6A1',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 200,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#A364FA',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 200,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#DA61F2',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 200,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#FA64AE',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 200,
+				}, {
+					color: '#FFFFFF',
+					bgColor: '#FF7F00',
+					imgUrl: '../../static/imgs/order/icon_goods.png',
+					name: '那鲁多饮料',
+					sub: '250ml',
+					notPayNum: 200,
+					payNum: 200,
+				}]
 			};
 		},
 		computed: {
@@ -71,6 +174,15 @@
 		}
 		.day_wrapper {
 			margin-left: 28px;
+		}
+	}
+	.goods_rank_wrapper {
+		margin-top: 36px;
+		.goods_rank_title_wrappr {
+			color: #333333;
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 16px;
 		}
 	}
 }
