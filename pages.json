@@ -68,7 +68,11 @@
             "style" : {}
         }
         ,{
-            "path" : "pages/demo/demo",
+            "path" : "pages/fundMgt/fundMgt",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/getCash/getCash",
             "style" : {}
         }
     ],
