@@ -26,6 +26,18 @@
 					background: ['#40E6AE', '#2DE062'],
 					name: '唯鹿',
 					id: ''
+				}, {
+					imgUrl: '../../static/imgs/account/gongshang.png',
+					type: '工商银行',
+					background: ['#57C4FA', '#4688FA'],
+					name: '李*',
+					id: '**** **** **** 2516'
+				}, {
+					imgUrl: '../../static/imgs/account/jianhang.png',
+					type: '建设银行',
+					background: ['#57C4FA', '#4688FA'],
+					name: '李*',
+					id: '**** **** **** 2516'
 				}]
 			};
 		}

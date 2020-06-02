@@ -106,6 +106,9 @@
 				</u-cell-group>
 			</view>
 		</view>
+		<view class="btn-wrapper">
+			<u-button type="primary">提交</u-button>
+		</view>
 		<u-picker mode="selector" v-model="showPicker" :default-selector="[0]" :range="selectorTypeList" @confirm="onPickerConfirm"></u-picker>
 	</view>
 </template>
@@ -168,8 +171,17 @@
 .discount_info_title_wrapper, .spec_info_title_wrapper {
 	margin: 32px 0 16px 0;
 }
+.spec_info_title_wrapper {
+	margin-bottom: 16px;
+}
 .discount_info_title, .spec_info_title {
 	color: #333333;
 	font-size: 18px;
+}
+.btn-wrapper {
+	position: fixed;
+	bottom: 0;
+	z-index: 2020;
+	width: 100%;
 }
 </style>

@@ -75,6 +75,14 @@
             "path" : "pages/getCash/getCash",
             "style" : {}
         }
+        ,{
+            "path" : "pages/message/message",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/shopSetting/shopSetting",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
