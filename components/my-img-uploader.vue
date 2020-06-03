@@ -1,7 +1,7 @@
 <template>
 	<u-upload :custom-btn="true">
 		<view slot="addBtn">
-			<img src="../assets/images/store/icon_zj.png" />
+			<img src="../static/imgs/store/icon_zj.png" />
 		</view>
 	</u-upload>
 </template>

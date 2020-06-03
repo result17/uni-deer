@@ -47,7 +47,7 @@
 			</u-cell-group>
 		</view>
 		<view class="shop_verify_wrapper">
-			<button type="primary" class="my_btn" @click="onVerifyBtnClick" :disabled="complete">审核</button>
+			<button type="primary" class="my_btn" @click="onVerifyBtnClick" :disabled="false">审核</button>
 		</view>
 		<view class="scopeActionSheet">
 			<u-action-sheet 

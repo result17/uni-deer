@@ -83,6 +83,12 @@
             "path" : "pages/shopSetting/shopSetting",
             "style" : {}
         }
+        ,{
+            "path" : "pages/guide/guide",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

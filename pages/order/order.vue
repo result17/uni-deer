@@ -29,9 +29,20 @@
 			...mapState(['isLogin', 'showPayMethodsList']),
 		},
 		onLoad() {
-			if (this.isLogin) {
+			const value = uni.getStorageSync('launchFlag')
+			if (value) {
+				if (!this.isLogin) {
+					uni.reLaunch({
+						url: '../login/login'
+					})
+				}
+			} else {
+				uni.setStorage({
+				      key: 'launchFlag',
+				      data: true
+				 })
 				uni.reLaunch({
-					url: '../login/login'
+					url: '../guide/guide'
 				})
 			}
 		},

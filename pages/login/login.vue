@@ -15,7 +15,7 @@
 					v-if="account" 
 					class="account_icon_wrapper"
 					@click="onAccountDeleteClick" >
-					<img width="16" src="../../assets/images/login/qyg_shop_icon_delete.png" />
+					<image :style="{width: '16px', height: '16px'}" src="../../static/imgs/login/qyg_shop_icon_delete.png" />
 				</view>
 			</view>
 			<password-input v-model="password" @input-delete="onPasswordDeleteClick"></password-input>
@@ -70,7 +70,7 @@
 			},
 			onLoginBtnClick() {
 				uni.navigateTo({
-					url: '../store/store'
+					url: '../shop/shop'
 				})
 				this.$store.commit('login')
 			}

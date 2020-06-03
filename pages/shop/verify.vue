@@ -2,7 +2,7 @@
 	<view>
 		<view class="shop_verify_status_wrapper">
 			<view class="shop_verify_status_img_wrapper">
-				<img class="shop_verify_status_img" src="../../assets/images/store/icon_success.png" />
+				<image class="shop_verify_status_img" src="../../static/imgs/store/icon_success.png"></image>
 			</view>
 			<div class="shop_verify_status_title">恭喜，店铺资料审核成功</div>
 			<div class="shop_verify_date">2020-05-20 15:20:20</div>
@@ -30,8 +30,8 @@
 					this.timerId = setTimeout(fn.bind(this), 1000)
 				} else {
 					clearTimeout(this.timerId)
-					uni.navigateTo({
-						url: '../login/login'
+					uni.switchTab({
+						url: '../order/order'
 					})
 					this.second = 5
 					this.timerId = 0
@@ -40,8 +40,8 @@
 		},
 		methods: {
 			onVerifyBtnClick() {
-				uni.navigateTo({
-					url: '../login/login'
+				uni.switchTab({
+					url: '../order/order'
 				})
 			}
 		}

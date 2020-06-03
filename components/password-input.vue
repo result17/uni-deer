@@ -12,19 +12,19 @@
 			class="password_icon_wrapper"
 			v-if="value"
 			>
-			<img width="16" style="marginRight: 8px;" 
+			<image :style="{marginRight: '8px', width: '16px', height: '16px'}" 
 				@click="onPasswordDeleteClick" 
-				src="../assets/images/login/qyg_shop_icon_delete.png" />
-			<img 
-				width="16" 
+				src="../static/imgs/login/qyg_shop_icon_delete.png"></image>
+			<image
+				:style="{width: '16px', height: '16px'}" 
 				v-if="showPassword"
 				@click="onPasswordShowClick"
-				src="../assets/images/login/qyg_shop_icon_display.png" />
-			<img 
-				width="16" 
+				src="../static/imgs/login/qyg_shop_icon_display.png"></image>
+			<image 
+				:style="{width: '16px', height: '16px'}" 
 				v-if="!showPassword"
 				@click="onPasswordShowClick"
-				src="../assets/images/login/qyg_shop_icon_hide.png" />
+				src="../static/imgs/login/qyg_shop_icon_hide.png"></image>
 		</view>
 	</view>
 </template>
