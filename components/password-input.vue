@@ -1,13 +1,16 @@
 <template>
 	<view class="password_wrapper">
-		<input
-			class="my_input"
-			:value="value"
-			@input="$emit('input', $event.target.value)"
-			:password="!showPassword" 
-			placeholder="请输入密码" 
-			placeholder-class="my_placeholder"
-			maxlength="15" />
+		<form>
+			<input
+				class="my_input"
+				:value="value"
+				@input="$emit('input', $event.target.value)"
+				:password="!showPassword" 
+				placeholder="请输入密码" 
+				placeholder-class="my_placeholder"
+				maxlength="15" />
+			
+		</form>
 		<view 
 			class="password_icon_wrapper"
 			v-if="value"

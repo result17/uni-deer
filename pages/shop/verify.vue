@@ -2,7 +2,7 @@
 	<view>
 		<view class="shop_verify_status_wrapper">
 			<view class="shop_verify_status_img_wrapper">
-				<image class="shop_verify_status_img" src="../../static/imgs/store/icon_success.png"></image>
+				<image :style="{width: '80px', height: '80px'}"class="shop_verify_status_img" src="../../static/imgs/store/icon_success.png"></image>
 			</view>
 			<div class="shop_verify_status_title">恭喜，店铺资料审核成功</div>
 			<div class="shop_verify_date">2020-05-20 15:20:20</div>

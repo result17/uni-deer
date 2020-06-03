@@ -66,26 +66,30 @@
 				} else {
 					this.rotateDir *= -1
 				}
-				this.timerId = requestAnimationFrame(this.rotateStep)
+				// this.timerId = requestAnimationFrame(this.rotateStep)
+				this.timerId = setTimeout(() => this.rotateStep(), 17)
 			},
 			rotateStep() {
+				clearTimeout(this.timerId)
 				this.rotateDeg += this.rotateDir * this.degStep
 				if (this.isRotating && this.rotateDir === -1 && this.rotateDeg !== -180) {
 					// 反转封面中
-					this.timerId = requestAnimationFrame(this.rotateStep)
+					// this.timerId = requestAnimationFrame(this.rotateStep)
+					this.timerId = setTimeout(() => this.rotateStep(), 17)
 				}
 				if (this.isRotating && this.rotateDir === -1 && this.rotateDeg === -180) {		
 					// 完全呈现背面
-					cancelAnimationFrame(this.timerId)
+					// cancelAnimationFrame(this.timerId)
 					this.isRotating = false
 					this.rotateDir = 1
 					this.timerId = 0
 				}
 				if (this.isRotating && this.rotateDir === 1 && this.rotateDeg !== 0) {
-					this.timerId = requestAnimationFrame(this.rotateStep)
+					// this.timerId = requestAnimationFrame(this.rotateStep)
+					this.timerId = setTimeout(() => this.rotateStep(), 17)
 				}
 				if (this.isRotating && this.rotateDir === 1 && this.rotateDeg === 0) {
-					cancelAnimationFrame(this.timerId)
+					// cancelAnimationFrame(this.timerId)
 					this.isRotating = false
 					this.rotateDir= -1
 					this.timerId = 0
