@@ -32,7 +32,7 @@
 				isRotating: false,
 				rotateDeg: 0,
 				timerId: 0,
-				degStep: 3,
+				degStep: 6,
 				btnStyle: {
 					display: 'inline-block',
 					width: '50px',

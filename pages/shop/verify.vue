@@ -40,6 +40,7 @@
 		},
 		methods: {
 			onVerifyBtnClick() {
+				clearTimeout(this.timerId)
 				uni.switchTab({
 					url: '../order/order'
 				})

@@ -81,7 +81,6 @@
 		},
 		methods: {
 			onChartClick() {
-				console.log('click')
 				uni.navigateTo({
 					url: './statToDelived'
 				})

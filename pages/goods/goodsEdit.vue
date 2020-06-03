@@ -178,10 +178,4 @@
 	color: #333333;
 	font-size: 18px;
 }
-.btn-wrapper {
-	position: fixed;
-	bottom: 0;
-	z-index: 2020;
-	width: 100%;
-}
 </style>

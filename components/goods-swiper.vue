@@ -101,6 +101,7 @@
 				willDeleteListName: '',
 				willDeleteListId: -1,
 				willDeleteListItemIdx: -1,
+				isMounted: false
 			};
 		},
 		mounted() {
@@ -108,9 +109,9 @@
 			for (const goods of data.goods) {
 				this.goodsList.push(goods)
 			}
-			this.$nextTick(function(){
+			this.$nextTick(function() {
+			// 移动端回调后执行
 				this.getSwipetItemHeight()
-				this.swiperCurrent = 0
 			})
 		},
 		watch: {
@@ -147,7 +148,11 @@
 				let view = uni.createSelectorQuery().in(this).selectAll('.goods_list_wrapper')
 				view.boundingClientRect(dataList => {
 					for (let i = 0; i < dataList.length; ++i) {
-						this.swiperHegithList[i] === undefined ? this.swiperHegithList.push(dataList[i].height) : this.$set(this.swiperHegithList, i, dataList[i].height)
+						!this.isMounted ? this.swiperHegithList.push(dataList[i].height) : this.$set(this.swiperHegithList, i, dataList[i].height)
+					}
+					if (!this.isMounted) {
+						this.isMounted = true
+						this.swiperCurrent = 0
 					}
 				}).exec()
 			},

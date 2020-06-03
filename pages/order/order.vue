@@ -29,8 +29,10 @@
 			...mapState(['isLogin', 'showPayMethodsList']),
 		},
 		onLoad() {
+			console.log('load')
 			const value = uni.getStorageSync('launchFlag')
 			if (value) {
+				console.log(this.isLogin)
 				if (!this.isLogin) {
 					uni.reLaunch({
 						url: '../login/login'

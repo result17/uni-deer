@@ -6262,40 +6262,47 @@ var render = function() {
     "v-uni-view",
     { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
     [
-      _c("v-uni-input", {
-        staticClass: _vm._$g(1, "sc"),
-        attrs: {
-          value: _vm._$g(1, "a-value"),
-          password: _vm._$g(1, "a-password"),
-          placeholder: "请输入密码",
-          "placeholder-class": "my_placeholder",
-          maxlength: "15",
-          _i: 1
-        },
-        on: {
-          input: function($event) {
-            return _vm.$handleViewEvent($event)
-          }
-        }
-      }),
-      _vm._$g(2, "i")
+      _c(
+        "v-uni-form",
+        { attrs: { _i: 1 } },
+        [
+          _c("v-uni-input", {
+            staticClass: _vm._$g(2, "sc"),
+            attrs: {
+              value: _vm._$g(2, "a-value"),
+              password: _vm._$g(2, "a-password"),
+              placeholder: "请输入密码",
+              "placeholder-class": "my_placeholder",
+              maxlength: "15",
+              _i: 2
+            },
+            on: {
+              input: function($event) {
+                return _vm.$handleViewEvent($event)
+              }
+            }
+          })
+        ],
+        1
+      ),
+      _vm._$g(3, "i")
         ? _c(
             "v-uni-view",
-            { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
+            { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
             [
               _c("v-uni-image", {
-                style: _vm._$g(3, "s"),
-                attrs: { src: _vm._$g(3, "a-src"), _i: 3 },
+                style: _vm._$g(4, "s"),
+                attrs: { src: _vm._$g(4, "a-src"), _i: 4 },
                 on: {
                   click: function($event) {
                     return _vm.$handleViewEvent($event)
                   }
                 }
               }),
-              _vm._$g(4, "i")
+              _vm._$g(5, "i")
                 ? _c("v-uni-image", {
-                    style: _vm._$g(4, "s"),
-                    attrs: { src: _vm._$g(4, "a-src"), _i: 4 },
+                    style: _vm._$g(5, "s"),
+                    attrs: { src: _vm._$g(5, "a-src"), _i: 5 },
                     on: {
                       click: function($event) {
                         return _vm.$handleViewEvent($event)
@@ -6303,10 +6310,10 @@ var render = function() {
                     }
                   })
                 : _vm._e(),
-              _vm._$g(5, "i")
+              _vm._$g(6, "i")
                 ? _c("v-uni-image", {
-                    style: _vm._$g(5, "s"),
-                    attrs: { src: _vm._$g(5, "a-src"), _i: 5 },
+                    style: _vm._$g(6, "s"),
+                    attrs: { src: _vm._$g(6, "a-src"), _i: 6 },
                     on: {
                       click: function($event) {
                         return _vm.$handleViewEvent($event)
@@ -8746,7 +8753,12 @@ var render = function() {
       _c(
         "v-uni-view",
         { attrs: { slot: "addBtn", _i: 1 }, slot: "addBtn" },
-        [_c("img", { attrs: { src: _vm._$g(2, "a-src"), _i: 2 } })],
+        [
+          _c("v-uni-image", {
+            style: _vm._$g(2, "s"),
+            attrs: { src: _vm._$g(2, "a-src"), _i: 2 }
+          })
+        ],
         1
       )
     ],
@@ -9444,8 +9456,9 @@ var render = function() {
             "v-uni-view",
             { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
             [
-              _c("img", {
+              _c("v-uni-image", {
                 staticClass: _vm._$g(3, "sc"),
+                style: _vm._$g(3, "s"),
                 attrs: { src: _vm._$g(3, "a-src"), _i: 3 }
               })
             ],
@@ -15059,7 +15072,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../Users/result17/Desktop/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 18);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\r\n/* 自定义 */\n.goods_edit_wrapper[data-v-f92147cc] {\r\n  padding: 20px 16px;\n}\n.base_info_title_wrapper[data-v-f92147cc] {\r\n  color: #333333;\r\n  font-size: 18px;\r\n  margin-bottom: 16px;\n}\n.img_picker_wrapper[data-v-f92147cc] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n  -webkit-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.img_picker_tips[data-v-f92147cc] {\r\n  margin: 8px 0 16px 0;\r\n  color: #999999;\r\n  font-size: 14px;\n}\n.discount_info_title_wrapper[data-v-f92147cc], .spec_info_title_wrapper[data-v-f92147cc] {\r\n  margin: 32px 0 16px 0;\n}\n.spec_info_title_wrapper[data-v-f92147cc] {\r\n  margin-bottom: 16px;\n}\n.discount_info_title[data-v-f92147cc], .spec_info_title[data-v-f92147cc] {\r\n  color: #333333;\r\n  font-size: 18px;\n}\n.btn-wrapper[data-v-f92147cc] {\r\n  position: fixed;\r\n  bottom: 0;\r\n  z-index: 2020;\r\n  width: 100%;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\r\n/* 自定义 */\n.goods_edit_wrapper[data-v-f92147cc] {\r\n  padding: 20px 16px;\n}\n.base_info_title_wrapper[data-v-f92147cc] {\r\n  color: #333333;\r\n  font-size: 18px;\r\n  margin-bottom: 16px;\n}\n.img_picker_wrapper[data-v-f92147cc] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n  -webkit-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.img_picker_tips[data-v-f92147cc] {\r\n  margin: 8px 0 16px 0;\r\n  color: #999999;\r\n  font-size: 14px;\n}\n.discount_info_title_wrapper[data-v-f92147cc], .spec_info_title_wrapper[data-v-f92147cc] {\r\n  margin: 32px 0 16px 0;\n}\n.spec_info_title_wrapper[data-v-f92147cc] {\r\n  margin-bottom: 16px;\n}\n.discount_info_title[data-v-f92147cc], .spec_info_title[data-v-f92147cc] {\r\n  color: #333333;\r\n  font-size: 18px;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
