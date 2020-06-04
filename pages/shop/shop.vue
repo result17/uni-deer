@@ -28,7 +28,9 @@
 					right-icon="arrow-right"
 				></u-field>
 				<u-field
+					@click="onAddressBtnClick"
 					v-model="shopAddress"
+					:disabled="true" 
 					label="店铺地址"
 					placeholder="点击图标选择"
 					right-icon="arrow-right"
@@ -245,6 +247,14 @@
 			onVerifyBtnClick() {
 				uni.navigateTo({
 					url: './verify'
+				})
+			},
+			onAddressBtnClick() {
+				const context = this
+				uni.chooseLocation({
+				    success: function (res) {
+						context.shopAddress = res.address
+				    }
 				})
 			}
 		},

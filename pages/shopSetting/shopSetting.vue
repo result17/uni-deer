@@ -94,7 +94,8 @@
 							>
 							</u-field>
 							<u-field
-								v-model="shopAdd"
+								@click="onAddressClick"
+								v-model="shopAddress"
 								label="店铺地址"
 								right-icon="arrow-right"
 								:disabled="true"
@@ -123,8 +124,18 @@
 				freightRedu: '',
 				shippingFees: '',
 				phone: '',
-				shopAdd: ','
+				shopAddress: '',
 			};
+		},
+		methods: {
+			onAddressClick() {
+				const context = this
+				uni.chooseLocation({
+				    success: function (res) {
+						context.shopAddress = res.address
+				    }
+				})
+			}
 		}
 	}
 </script>

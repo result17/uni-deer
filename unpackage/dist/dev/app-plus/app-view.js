@@ -7728,6 +7728,11 @@ var render = function() {
               }),
               _c("u-field", {
                 attrs: { _i: 11 },
+                on: {
+                  click: function($event) {
+                    return _vm.$handleViewEvent($event)
+                  }
+                },
                 model: {
                   value: _vm._$g(11, "v-model"),
                   callback: function() {},
