@@ -93,7 +93,7 @@
 	justify-content: center;
 	width: 100%;
 	height: 80px;
-	background-image: url(../assets/images/order/order_bg1.png);
+	background-image: url(../static/imgs/order/order_bg1.png);
 	background-size: contain;
 }
 .scroll_list_wrapper {

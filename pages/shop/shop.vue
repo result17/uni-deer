@@ -35,6 +35,9 @@
 					placeholder="点击图标选择"
 					right-icon="arrow-right"
 				></u-field>
+				<view style="fontSize: 0">
+					<u-line></u-line>
+				</view>
 				<view class="shop_owner_info_title">店主信息</view>
 				<u-field
 					v-model="ownerName"

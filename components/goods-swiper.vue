@@ -83,7 +83,7 @@
 					name: '下架'
 				}],
 				current: 0,
-				swiperCurrent: -1,
+				swiperCurrent: 0,
 				goodsList: [],
 				swiperHegithList: [],
 				swiperHeight: 150,
@@ -152,7 +152,8 @@
 					}
 					if (!this.isMounted) {
 						this.isMounted = true
-						this.swiperCurrent = 0
+						// this.swiperCurrent = 0
+						this.swiperHeight = this.swiperHegithList[0]
 					}
 				}).exec()
 			},

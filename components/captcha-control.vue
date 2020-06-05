@@ -11,7 +11,7 @@
 			class="captcha_icon_wrapper"
 			v-if="value"
 			@click="onCaptchaDeleteClick" >
-			<img width="16" style="marginRight: 8px;" src="../assets/images/login/qyg_shop_icon_delete.png" />
+			<image :style="{marginRight: '8px', width: '16px', height: '16px'}" src="../static/imgs/login/qyg_shop_icon_delete.png"></image>
 		</view>
 		<view class="captcha_get_wrapper">
 			<span v-if="hasSentCaptchaReqSec === 0" class="captcha_get_btn" @click="onGetCaptchaBtnClick">{{this.hasSentCaptchaReq ? '重新获取' : '获取验证码'}}</span>
