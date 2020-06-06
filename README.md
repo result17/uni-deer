@@ -1,5 +1,7 @@
 ## bug
 uni-app会在宽萤幕下给html font-size设置96px的字体，导致样式变形。
+Ignored attempt to cancel a touchmove event with cancelable=false, for example because scrolling is in progress and cannot be interrupted.
+是两个滚动重叠，一个滚动事件并未完成再进行滚动会导致错误出现，还没想到解决方法。
 
 ## fix
 修改了u-action-sheet的源码

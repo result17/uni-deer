@@ -82,7 +82,7 @@
 			},
 			handleChangeHeight(height) {
 				this.swiperHeight = height
-			}
+			},
 		}
 	}
 </script>

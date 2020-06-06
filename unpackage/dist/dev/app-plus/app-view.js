@@ -242,36 +242,48 @@ var render = function() {
     "v-uni-view",
     { attrs: { _i: 0 } },
     [
-      _c("order-title-header", { attrs: { _i: 1 } }),
-      _c("order-swiper", { attrs: { _i: 2 } }),
-      _c(
-        "v-uni-view",
-        {
-          attrs: { _i: 3 },
-          on: {
-            mousewheel: function($event) {
-              return _vm.$handleViewEvent($event, { stop: true, prevent: true })
-            }
-          }
-        },
-        [
-          _vm._v(">"),
-          _vm._$g(4, "i")
-            ? _c("my-popup-action-list", {
-                attrs: { _i: 4 },
-                on: {
-                  touchmove: function($event) {
-                    return _vm.$handleViewEvent($event, {
-                      stop: true,
-                      prevent: true
-                    })
+      _vm._$g(1, "i")
+        ? _c(
+            "v-uni-view",
+            { attrs: { _i: 1 } },
+            [
+              _c("order-title-header", { attrs: { _i: 2 } }),
+              _c("order-swiper", { attrs: { _i: 3 } }),
+              _c(
+                "v-uni-view",
+                {
+                  attrs: { _i: 4 },
+                  on: {
+                    mousewheel: function($event) {
+                      return _vm.$handleViewEvent($event, {
+                        stop: true,
+                        prevent: true
+                      })
+                    }
                   }
-                }
-              })
-            : _vm._e()
-        ],
-        1
-      )
+                },
+                [
+                  _vm._v(">"),
+                  _vm._$g(5, "i")
+                    ? _c("my-popup-action-list", {
+                        attrs: { _i: 5 },
+                        on: {
+                          touchmove: function($event) {
+                            return _vm.$handleViewEvent($event, {
+                              stop: true,
+                              prevent: true
+                            })
+                          }
+                        }
+                      })
+                    : _vm._e()
+                ],
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e()
     ],
     1
   )
@@ -4968,7 +4980,7 @@ if(false) {}
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../Users/result17/Desktop/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 18);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../../Users/result17/Desktop/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/lib/app-plus/getUrl.js */ 162);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../assets/images/order/order_bg1.png */ 163);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../static/imgs/order/order_bg1.png */ 163);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -5023,13 +5035,13 @@ module.exports = function (url, options) {
 
 /***/ }),
 /* 163 */
-/*!**************************************************************!*\
-  !*** C:/code/uni-app/deer/assets/images/order/order_bg1.png ***!
-  \**************************************************************/
+/*!************************************************************!*\
+  !*** C:/code/uni-app/deer/static/imgs/order/order_bg1.png ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/assets/images/order/order_bg1.png";
+module.exports = "/static/imgs/order/order_bg1.png";
 
 /***/ }),
 /* 164 */
@@ -6868,9 +6880,9 @@ var render = function() {
               }
             },
             [
-              _c("img", {
-                staticStyle: { marginRight: "8px" },
-                attrs: { width: "16", src: _vm._$g(3, "a-src"), _i: 3 }
+              _c("v-uni-image", {
+                style: _vm._$g(3, "s"),
+                attrs: { src: _vm._$g(3, "a-src"), _i: 3 }
               })
             ],
             1
@@ -7655,6 +7667,7 @@ var components = {
   uCellGroup: __webpack_require__(/*! uview-ui/components/u-cell-group/u-cell-group.vue */ 247)
     .default,
   uField: __webpack_require__(/*! uview-ui/components/u-field/u-field.vue */ 255).default,
+  uLine: __webpack_require__(/*! uview-ui/components/u-line/u-line.vue */ 109).default,
   uActionSheet: __webpack_require__(/*! uview-ui/components/u-action-sheet/u-action-sheet.vue */ 263)
     .default
 }
@@ -7741,21 +7754,27 @@ var render = function() {
               }),
               _c(
                 "v-uni-view",
-                { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
+                { staticStyle: { fontSize: "0" }, attrs: { _i: 12 } },
+                [_c("u-line", { attrs: { _i: 13 } })],
+                1
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
                 [_vm._v("店主信息")]
               ),
               _c("u-field", {
-                attrs: { _i: 13 },
+                attrs: { _i: 15 },
                 model: {
-                  value: _vm._$g(13, "v-model"),
+                  value: _vm._$g(15, "v-model"),
                   callback: function() {},
                   expression: "ownerName"
                 }
               }),
               _c("u-field", {
-                attrs: { _i: 14 },
+                attrs: { _i: 16 },
                 model: {
-                  value: _vm._$g(14, "v-model"),
+                  value: _vm._$g(16, "v-model"),
                   callback: function() {},
                   expression: "tel"
                 }
@@ -7768,13 +7787,13 @@ var render = function() {
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } },
+        { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
         [
           _c(
             "v-uni-button",
             {
-              staticClass: _vm._$g(16, "sc"),
-              attrs: { type: "primary", disabled: false, _i: 16 },
+              staticClass: _vm._$g(18, "sc"),
+              attrs: { type: "primary", disabled: false, _i: 18 },
               on: {
                 click: function($event) {
                   return _vm.$handleViewEvent($event)
@@ -7788,17 +7807,17 @@ var render = function() {
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
+        { staticClass: _vm._$g(19, "sc"), attrs: { _i: 19 } },
         [
           _c("u-action-sheet", {
-            attrs: { _i: 18 },
+            attrs: { _i: 20 },
             on: {
               click: function($event) {
                 return _vm.$handleViewEvent($event)
               }
             },
             model: {
-              value: _vm._$g(18, "v-model"),
+              value: _vm._$g(20, "v-model"),
               callback: function() {},
               expression: "showScope"
             }
@@ -18840,10 +18859,15 @@ var render = function() {
                           }),
                           _c("u-field", {
                             attrs: { _i: 25 },
+                            on: {
+                              click: function($event) {
+                                return _vm.$handleViewEvent($event)
+                              }
+                            },
                             model: {
                               value: _vm._$g(25, "v-model"),
                               callback: function() {},
-                              expression: "shopAdd"
+                              expression: "shopAddress"
                             }
                           })
                         ],

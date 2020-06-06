@@ -1,9 +1,11 @@
 <template>
 	<view >
-		<order-title-header></order-title-header>
-		<order-swiper></order-swiper>
-		<view @mousewheel.stop.prevent></my-popup-action-list>>
-			<my-popup-action-list v-if="showPayMethodsList" @touchmove.stop.prevent></my-popup-action-list>
+		<view v-if="isLogin">
+			<order-title-header></order-title-header>
+			<order-swiper></order-swiper>
+			<view @mousewheel.stop.prevent></my-popup-action-list>>
+				<my-popup-action-list v-if="showPayMethodsList" @touchmove.stop.prevent></my-popup-action-list>
+			</view>
 		</view>
 	</view>
 </template>
@@ -29,10 +31,8 @@
 			...mapState(['isLogin', 'showPayMethodsList']),
 		},
 		onLoad() {
-			console.log('load')
 			const value = uni.getStorageSync('launchFlag')
 			if (value) {
-				console.log(this.isLogin)
 				if (!this.isLogin) {
 					uni.reLaunch({
 						url: '../login/login'
