@@ -12,7 +12,7 @@
 					@tap="emit(index)"
 				>		
 					<u-badge v-if="item.count" type="error" :count="item.count" :absolute="true" :offset="[32, 24]"></u-badge>
-					<image style="width: 20px; height: 20px;" mode="aspectFit" :src="tabItemImgSrc(index)" />
+					<image style="width: 20px; height: 20px;" mode="aspectFit" :src="tabItemImgSrc(index)"></image>
 					<span class="tabs_item_ins">{{item.name}}</span>
 				</view>
 			</view>

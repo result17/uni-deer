@@ -13,7 +13,7 @@
 						{{name}}
 					</view>
 				</view>
-				<view v-if="id" class="card_id_wrapper">{{id}}</view>
+				<view v-if="id" class="card_id_wrapper">{{account}}</view>
 			</view>
 			<view v-show="this.rotateDeg < -90" :style="btnStyle">提现</view>
 		</view>
@@ -57,7 +57,7 @@
 			},
 			type: String,
 			name: String,
-			id: String
+			account: String
 		},
 		methods: {
 			onCardClick() {

@@ -7,7 +7,7 @@
 			:type="item.type"
 			:background="item.background"
 			:name="item.name"
-			:id="item.id"
+			:account="item.account"
 		></account-card>
 	</view>
 </template>
@@ -25,19 +25,19 @@
 					type: '微信',
 					background: ['#40E6AE', '#2DE062'],
 					name: '唯鹿',
-					id: ''
+					account: ''
 				}, {
 					imgUrl: '../../static/imgs/account/gongshang.png',
 					type: '工商银行',
 					background: ['#57C4FA', '#4688FA'],
 					name: '李*',
-					id: '**** **** **** 2516'
+					account: '**** **** **** 2516'
 				}, {
 					imgUrl: '../../static/imgs/account/jianhang.png',
 					type: '建设银行',
 					background: ['#57C4FA', '#4688FA'],
 					name: '李*',
-					id: '**** **** **** 2516'
+					account: '**** **** **** 2516'
 				}]
 			};
 		}

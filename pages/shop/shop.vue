@@ -3,7 +3,7 @@
 		<view class="shop_info_title">店铺资料</view>
 		<view class="shop_uploader_wrapper">
 			<view class="img_uploader_wrapper">
-				<my-img-uploader class="img_uploader"></my-img-uploader>
+				<my-img-uploader></my-img-uploader>
 			</view>
 			<view class="img_uploader_ins">
 				<span class="img_uploader_ins">
@@ -276,10 +276,6 @@
 	margin-bottom: 16px;
 	color: #333333;
 	font-size: 18px;
-}
-.img_uploader {
-	// uview内部使用flex布局
-	justify-content: center;
 }
 .img_uploader_ins {
 	margin-top: 8px;

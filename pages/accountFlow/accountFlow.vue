@@ -9,8 +9,8 @@
 				<view class="date_wrapper">{{item.date}}</view>
 			</u-sticky>
 			<flowItem
-				v-for="(item, index) of item.dealList"
-				:key="index"
+				v-for="(it, idx) of item.dealList"
+				:key="idx"
 				:name="item.name"
 				:time="item.time"
 				:money="item.money"

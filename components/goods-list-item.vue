@@ -120,7 +120,7 @@
 			onDeleteBtnClick() {
 				this.$emit('delete', this.idx)
 			}
-		},
+		}
 	}
 </script>
 

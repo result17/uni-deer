@@ -3,9 +3,9 @@
 		<u-button
 			shape="square" 
 			size="mini"
-			:custom-style="item.type === 'default' ? customDefaultStyle : customPrimaryStyle"
 			v-for="(item, index) of statusBtn[status]"
-			@click="item.onClick"
+			:custom-style="item.type === 'default' ? customDefaultStyle : customPrimaryStyle"
+			@click="onClick(index)"
 			:key="index"
 			:style="{'margin-right': (statusBtn[status].length > 1 && index !== statusBtn[status].length - 1 ? '8px': '0')}"
 			:type="item.type">{{item.context}}</u-button>
@@ -37,12 +37,12 @@
 					newOrder: [{
 						type: 'default',
 						context: '拒单',
-						onClick: this.onClick
+						onClick: this.onUseLessClick
 					},
 					{
 						type: 'primary',
 						context: '接单',
-						onClick: this.onClick
+						onClick: this.onUseLessClick
 					}],
 					toDelivered: [{
 						type: 'default',
@@ -77,9 +77,6 @@
 		},
 		methods: {
 			...mapMutations(['changeShowPayMethodsList']),
-			onClick() {
-				console.log('click')
-			},
 			onUseLessClick() {
 				console.log('useless')
 			},
@@ -90,6 +87,9 @@
 				uni.navigateTo({
 					url: '/pages/orderTrack/orderTrack'
 				})
+			},
+			onClick(idx) {
+				this.statusBtn[this.status][idx].onClick()
 			}
 		}
 	}

@@ -1,10 +1,11 @@
 <template>
-	<u-upload :custom-btn="true">
-		<view slot="addBtn">
-			<!-- <img src="../static/imgs/store/icon_zj.png" /> -->
-			<image :style="{width: '80px', height: '80px'}" src="../static/imgs/store/icon_zj.png"></image>
-		</view>
-	</u-upload>
+	<view class="center">
+		<u-upload :custom-btn="true">
+			<view slot="addBtn" class="center">
+				<image :style="{width: '80px', height: '80px'}" src="../static/imgs/store/icon_zj.png"></image>
+			</view>
+		</u-upload>
+	</view>
 </template>
 
 <script>
@@ -18,6 +19,9 @@
 	}
 </script>
 
-<style lang="less" scoped>
-
+<style lang="scss" scoped>
+.center {
+	display: flex;
+	justify-content: center;
+}
 </style>

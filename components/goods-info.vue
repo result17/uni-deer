@@ -1,9 +1,9 @@
 <template>
 	<view class="goods_info_wrapper">
 		<view class="goods_info_left_wrapper">
-			<span class="prices">￥{{this.prices}}</span>
+			<span class="prices">￥{{prices}}</span>
 			<span class="goods_count">
-				共{{this.goodsCount}}件商品
+				共{{goodsCount}}件商品
 			</span>
 		</view>
 		<view class="goods_info_right_wrapper">

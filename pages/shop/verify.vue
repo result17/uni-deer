@@ -6,7 +6,7 @@
 			</view>
 			<div class="shop_verify_status_title">恭喜，店铺资料审核成功</div>
 			<div class="shop_verify_date">2020-05-20 15:20:20</div>
-			<div class="shop_verify_enter_ins">{{this.second}}秒后进入主页面</div>
+			<div class="shop_verify_enter_ins">{{second}}秒后进入主页面</div>
 		</view>
 		<view class="shop_verify_enter_wrapper">
 			<button type="primary" class="my_btn" @click="onVerifyBtnClick">进入</button>
