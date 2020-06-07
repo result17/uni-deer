@@ -11,7 +11,7 @@
 					<span class="selected_category">
 						{{categoryList[selectedCategoryId].category}}
 					</span>
-					<u-icon name="arrow-down"></u-icon>
+					<u-icon :style="{ display: 'inline' }" name="arrow-down"></u-icon>
 				</view>
 			</view>
 			<u-popup mode="top" v-model="showCategoryList" :top="124">

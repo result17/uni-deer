@@ -37,7 +37,7 @@
 					v-for="(item, index) of options"
 					:key="index"
 					:style="{background: item.style.bgColor}"
-					@click="item.onClick"
+					@click="onClick(index)"
 					class="mask_btns">
 					<view
 						:style="{color: item.style.color}"
@@ -119,6 +119,9 @@
 			},
 			onDeleteBtnClick() {
 				this.$emit('delete', this.idx)
+			},
+			onClick(idx) {
+				this.options[idx].onClick()
 			}
 		}
 	}

@@ -9,7 +9,7 @@
 			</view>
 			<view class="client_context_wrapper">
 				<view class="context_left_wrapper">
-					<image style="width: 44px; height: 44px;" src="../../static/imgs/order/icon_avatar.png" mode="aspectFit"></image>
+					<image style="width: 44px; height: 44px;" src="/static/imgs/order/icon_avatar.png" mode="aspectFit"></image>
 					<view class="context_info_wrapper">
 						<view class="client_name">郭李</view>
 						<view class="client_phone">15002158964</view>
@@ -17,7 +17,7 @@
 				</view>
 				<view class="context_right_wrapper">
 					<u-line :style="{verticalAlign: 'baseline', marginRight: '16px'}" length="24px" direction="col" color="#999999"></u-line>
-					<image style="width: 24px; height: 24px;" src="../../static/imgs/order/icon_phone.png" mode="aspectFit"></image>
+					<image style="width: 24px; height: 24px;" src="/static/imgs/order/icon_phone.png" mode="aspectFit"></image>
 				</view>
 				<view class="context_address_wrapper">
 					<image style="width: 16px; height: 16px; vertical-align: bottom;" src="../../static/imgs/order/icon_address.png" mode="aspectFit"></image>
@@ -107,8 +107,8 @@
 			</view>
 		</view>
 		<view class="order_info_btn_wrapper">
-			<u-button :custom-style="{ color: '#5793FA', backgroundColor: '#E1EAFA',fontSize: '18px', width: '45%'}" type="default">拒单</u-button>
-			<u-button :custom-style="{ color: '#FFFFFF', backgroundColor: '#4688FA',fontSize: '18px', width: '45%'}" type="primary">接单</u-button>
+			<u-button :custom-style="{ color: '#5793FA', backgroundColor: '#E1EAFA',fontSize: '18px', width: 'calc(40vw)'}" type="default">拒单</u-button>
+			<u-button :custom-style="{ color: '#FFFFFF', backgroundColor: '#4688FA',fontSize: '18px', width: 'calc(40vw)'}" type="primary">接单</u-button>
 		</view>
 	</view>
 </template>
@@ -124,7 +124,7 @@
 			return {
 				goodsInfo: [
 					{
-						imgUrl: '../../static/imgs/order/icon_goods.png',
+						imgUrl: '/static/imgs/order/icon_goods.png',
 						title: '泊泉雅花瓣·浪漫亲肤玫瑰沐浴乳',
 						subTitle: '玫瑰香 520ml',
 						count: 1,
@@ -140,7 +140,7 @@
 						}]
 					},
 					{
-						imgUrl: '../../static/imgs/order/icon_goods.png',
+						imgUrl: '/static/imgs/order/icon_goods.png',
 						title: '日本纳鲁多橙饮',
 						subTitle: '125ml',
 						count: 1,
@@ -248,5 +248,6 @@
 .order_info_btn_wrapper {
 	display: flex;
 	margin: 16px 16px 8px 16px;
+	justify-content: space-between;
 }
 </style>

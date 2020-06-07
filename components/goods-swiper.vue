@@ -109,13 +109,15 @@
 			for (const goods of data.goods) {
 				this.goodsList.push(goods)
 			}
-			this.$nextTick(function() {
-			// 移动端回调后执行
+			this.$nextTick(() => {
+			// 移动端回调后执行()
 				this.getSwipetItemHeight()
 			})
 		},
 		watch: {
 			swiperCurrent: function(val) {
+				this.getSwipetItemHeight()
+				console.log('next')
 				this.swiperHeight = this.swiperHegithList[val]
 			}
 		},
@@ -150,6 +152,7 @@
 					for (let i = 0; i < dataList.length; ++i) {
 						!this.isMounted ? this.swiperHegithList.push(dataList[i].height) : this.$set(this.swiperHegithList, i, dataList[i].height)
 					}
+					console.log(this.swiperHegithList)
 					if (!this.isMounted) {
 						this.isMounted = true
 						// this.swiperCurrent = 0
@@ -196,5 +199,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+.goods_list_wrapper {
+	width: 100%;
+	height: auto;
+}
 </style>
