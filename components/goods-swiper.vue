@@ -109,15 +109,23 @@
 			for (const goods of data.goods) {
 				this.goodsList.push(goods)
 			}
-			this.$nextTick(() => {
-			// 移动端回调后执行()
-				this.getSwipetItemHeight()
-			})
+			// this.$nextTick(() => {
+			// // 移动端回调后执行()
+			// 	console.log('next tick')
+			// 	debugger
+			// 	this.getSwipetItemHeight()
+			// })
+		},
+		updated() {
+			if (!this.isMounted) {
+				this.$nextTick(() => {
+				// 移动端回调后执行()
+					this.getSwipetItemHeight()
+				})
+			}
 		},
 		watch: {
 			swiperCurrent: function(val) {
-				this.getSwipetItemHeight()
-				console.log('next')
 				this.swiperHeight = this.swiperHegithList[val]
 			}
 		},
@@ -146,19 +154,25 @@
 				this.swiperCurrent = current;
 				this.current = current;
 			},
-			getSwipetItemHeight() {
+			getSwipetItemHeight(listIdx) {
 				let view = uni.createSelectorQuery().in(this).selectAll('.goods_list_wrapper')
 				view.boundingClientRect(dataList => {
 					for (let i = 0; i < dataList.length; ++i) {
 						!this.isMounted ? this.swiperHegithList.push(dataList[i].height) : this.$set(this.swiperHegithList, i, dataList[i].height)
 					}
-					console.log(this.swiperHegithList)
-					if (!this.isMounted) {
+					if (!this.isMounted && !listIdx) {
 						this.isMounted = true
 						// this.swiperCurrent = 0
-						this.swiperHeight = this.swiperHegithList[0]
+						this.changeHeight(0)
+					}
+					// maybe zero
+					if (listIdx !== undefined) {
+						this.changeHeight(listIdx)
 					}
 				}).exec()
+			},
+			changeHeight(listIdx) {
+				this.swiperHeight = this.swiperHegithList[listIdx]
 			},
 			onDeleteOnSaleItem(idx) {
 				this.showActionSheet = true
@@ -183,8 +197,7 @@
 				const id = this.willDeleteListId
 				// 异步
 				this.$nextTick(function(){
-					this.getSwipetItemHeight()
-					this.swiperHeight = this.swiperHegithList[id]
+					this.getSwipetItemHeight(id)
 				})
 				// 恢复
 				this.onSheetCancel()

@@ -22,8 +22,8 @@
 					￥{{cost}}
 				</view>
 			</u-col>
-			<u-col class="goods_type_wrapper" span="2">
-				<view>
+			<u-col span="2">
+				<view class="goods_type_wrapper">
 					<view class="goods_type">
 						{{type}}
 					</view>
@@ -137,7 +137,10 @@
 	margin-bottom: 18px;
 }
 .goods_type_wrapper {
-	align-self: flex-end;
+	// align-self: flex-end;
+	// 兼容小程序写法
+	position: absolute;
+	bottom: 24px;
 }
 .goods_type {
 	color: #999999;

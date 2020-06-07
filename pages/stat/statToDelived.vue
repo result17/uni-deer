@@ -57,7 +57,7 @@
 				goodsList: [{
 					color: '#FFFFFF',
 					bgColor: '#FFD147',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,
@@ -65,7 +65,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#CEE6F2',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 100,
@@ -73,7 +73,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#FFAA80',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,
@@ -81,7 +81,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#7087FA',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,
@@ -89,7 +89,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#A0E65C',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,
@@ -97,7 +97,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#5CE6A1',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,
@@ -105,7 +105,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#A364FA',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,
@@ -113,7 +113,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#DA61F2',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,
@@ -121,7 +121,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#FA64AE',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,
@@ -129,7 +129,7 @@
 				}, {
 					color: '#FFFFFF',
 					bgColor: '#FF7F00',
-					imgUrl: '../../static/imgs/order/icon_goods.png',
+					imgUrl: '/static/imgs/order/icon_goods.png',
 					name: '那鲁多饮料',
 					sub: '250ml',
 					notPayNum: 200,

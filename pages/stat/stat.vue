@@ -1,6 +1,7 @@
 <template>
 	<view>
 		<view class="stat_header_wrapper">
+			<image :style="{ width: '100%', height: '72px'}" src="/static/imgs/statistic/statistic_bg.png" mode="heightFix"></image>
 			<view class="stat_header">
 				统计
 			</view>
@@ -69,13 +70,13 @@
 			return {
 				charts: [{
 					title: '订单统计',
-					chartUrl: '../../static/imgs/statistic/sjzs.png'
+					chartUrl: '/static/imgs/statistic/sjzs.png'
 				}, {
 					title: '交易额统计',
-					chartUrl: '../../static/imgs/statistic/jyetj.png'
+					chartUrl: '/static/imgs/statistic/jyetj.png'
 				}, {
 					title: '商品统计',
-					chartUrl: '../../static/imgs/statistic/sptj.png'
+					chartUrl: '/static/imgs/statistic/sptj.png'
 				}]
 			};
 		},
@@ -94,9 +95,6 @@
 	position: relative;
 	width: 100%;
 	height: 72px;
-	background-image: url(../../static/imgs/statistic/statistic_bg.png);
-	background-size: cover;
-	background-position: bottom;
 	.stat_header {
 		position: absolute;
 		left: 16px;
@@ -118,12 +116,12 @@
 		background: #FFFFFF;
 		border-radius: 8px;
 		box-shadow: 0 2px 8px 0 rgba(220,231,250,0.50);
+		.neworder_wrapper, .todeliver_wrapper, .today_total_amount_wrapper {
+			position: relative;
+			flex: 1;
+			height: 100%;
+		}
 	}
-}
-.stat_info > * {
-	position: relative;
-	flex: 1;
-	height: 120px;
 }
 .stat_info_content_wrapper {
 	position: absolute;

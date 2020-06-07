@@ -2,38 +2,48 @@
 	<view class="goods_rank_item_wrapper">
 		<u-row class="row">
 			<u-col span="2">
-				<view :style="{background: bgColor, color: color}" class="rank_num center">{{index + 1}}</view>
+				<view class="col_wrapper">
+					<view :style="{background: bgColor, color: color}" class="rank_num center">{{index + 1}}</view>	
+				</view>
 			</u-col>
 			<u-col span="2">
-				<image class="center" style="width: 36px; height: 36px;" :src="imgUrl" mode="aspectFill"></image>
+				<view class="col_wrapper">
+					<image class="center" style="width: 36px; height: 36px;" :src="imgUrl" mode="aspectFill"></image>
+				</view>
 			</u-col>
 			<u-col span="4">
-				<view class="center">
-					<view class="name_wrapper">
-						{{name}}
-					</view>
-					<view class="sub_wrapper">
-						{{sub}}
-					</view>
-				</view>
-			</u-col>
-			<u-col span="2">
-				<view class="center">
-					<view class="up_content grey_font">
-						{{notPayNum}}件
-					</view>
-					<view class="grey_font">
-						未支付
+				<view class="col_wrapper">
+					<view class="center">
+						<view class="name_wrapper">
+							{{name}}
+						</view>
+						<view class="sub_wrapper">
+							{{sub}}
+						</view>
 					</view>
 				</view>
 			</u-col>
 			<u-col span="2">
-				<view class="center">
-					<view class="up_content grey_font">
-						{{payNum}}件
+				<view class="col_wrapper">
+					<view class="center">
+						<view class="up_content grey_font">
+							{{notPayNum}}件
+						</view>
+						<view class="grey_font">
+							未支付
+						</view>
 					</view>
-					<view class="grey_font">
-						已支付
+				</view>
+			</u-col>
+			<u-col span="2">
+				<view class="col_wrapper">
+					<view class="center">
+						<view class="up_content grey_font">
+							{{payNum}}件
+						</view>
+						<view class="grey_font">
+							已支付
+						</view>
 					</view>
 				</view>
 			</u-col>
@@ -66,7 +76,7 @@
 .goods_rank_item_wrapper {
 	background-color: #FFFFFF;
 	box-shadow: 0 2px 8px 0 rgba(220,231,250,0.50);
-	.row > * {
+	.col_wrapper {
 		position: relative;
 		height: 68px;
 	}
