@@ -22,8 +22,12 @@
 			</span>
 		</view>
 		<view class="captcha_btn">
-			<button class="my_btn" type="primary" :disabled="complete" @click="onLoginBtnClick">登录</button>
-			<button class="my_btn" type="primary" @click="onPasswordBtnClick">密码登录</button>
+			<view class="my_btn">
+				<u-button type="primary" :disabled="complete" @click="onLoginBtnClick">登录</u-button>
+			</view>
+			<view class="my_btn">
+				<u-button type="primary" @click="onPasswordBtnClick">密码登录</u-button>
+			</view>
 		</view>
 		<view class="captcha_link">
 			<span class="forgot_password" @click="onFpwBtnClick">忘记密码</span>		
@@ -94,6 +98,12 @@
 	font-size: 14px;
 	color: #999999;
 }
+.captcha_btn {
+	padding: 16px;
+}
+.my_btn {
+	margin-bottom: 8px;
+}
 .captcha_tips {
 	margin-top: 9px;
 	margin-left: 16px;
@@ -105,9 +115,6 @@
 }
 .tips_sign_up_link {
 	color: #FF4759;
-}
-.my_btn {
-	margin: 0 5% 6px 5%;
 }
 .forgot_password {
 	float: right;

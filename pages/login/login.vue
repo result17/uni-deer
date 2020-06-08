@@ -21,8 +21,12 @@
 			<password-input v-model="password" @input-delete="onPasswordDeleteClick"></password-input>
 		</view>
 		<view class="login_btn">
-			<button class="my_btn" type="primary" :disabled="complete" @click="onLoginBtnClick">登录</button>
-			<button class="my_btn" type="primary" @click="onCaptchaBtnClick">验证码登录</button>
+			<view class="my_btn">
+				<u-button type="primary" :disabled="complete" @click="onLoginBtnClick">登录</u-button>
+			</view>
+			<view class="my_btn">
+				<u-button class="my_btn" type="primary" @click="onCaptchaBtnClick">验证码登录</u-button>
+			</view>
 		</view>
 		<view class="login_link">
 			<span class="forgot_password" @click="onFpwBtnClick">忘记密码</span>		
@@ -110,9 +114,10 @@
 }
 .login_btn {
 	margin-top: 20px;
+	padding: 0 16px;
 }
 .my_btn {
-	margin: 0 5% 6px 5%;
+	margin-bottom: 8px;
 }
 .forgot_password {
 	float: right;

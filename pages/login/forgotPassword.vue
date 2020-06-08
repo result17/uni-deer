@@ -14,7 +14,9 @@
 			<password-input v-model="password" @input-delete="onPasswordDeleteClick"></password-input>
 		</view>
 		<view class="fpw_btn">
-			<button class="my_btn" type="primary" :disabled="complete">确认</button>
+			<view class="my_btn">
+				<u-button type="primary" :disabled="complete">确认</u-button>		
+			</view>
 		</view>
 	</view>
 </template>
@@ -64,10 +66,11 @@
 	min-height: 50px;
 	border-bottom: 1px solid #eeeeee;
 }
-.my_btn {
-	margin: 0 5% 6px 5%;
-}
 .fpw_btn {
 	margin-top: 20px;
+	padding: 16px;
+}
+.my_btn {
+	margin-bottom: 8px;
 }
 </style>

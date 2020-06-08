@@ -22,6 +22,7 @@ Ignored attempt to cancel a touchmove event with cancelable=false, for example b
 图片千万别使用相对路径，使用绝对路径。
 微信小程序直接:style="dataObj"会被编译成"[object object]"
 微信小程序通过props传递Date类型时，会隐式转换成String，在原生js运行时是Object
+直接给自定义挂载样式，在微信小程序是无效的，此点甚为恶心。解决方法在自定义组件套一个容器，给此容器挂载样式。
 
 ## 滚动事件发生在父元素
 
