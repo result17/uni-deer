@@ -32,13 +32,17 @@
 			};
 		},
 		props: {
-			date: Date,
+			timeStamp: Number,
 			text: String,
 			title: String,
 			hasRead: Boolean
 		},
 		computed: {
+			date() {
+				return new Date(this.timeStamp)
+			},
 			getMsgDate() {
+				// console.log(typeof this.date)
 				return `${this.date.getFullYear()}-${(this.date.getMonth() + 1).toString().padStart(2, 0)}-${this.date.getDate().toString().padStart(2, 0)} ${this.date.getHours().toString().padStart(2, 0)}:${this.date.getMinutes().toString().padStart(2, 0)}:${this.date.getSeconds().toString().padStart(2, 0)}`
 			}
 		}

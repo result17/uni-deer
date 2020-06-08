@@ -1,6 +1,7 @@
 <template>
 	<view class="fund_mgt_wrapper">
 		<view class="fund_mgt_card_wrapper">
+			<image src="/static/imgs/account/bg.png" :style="{ position: 'absolute', width: '100%', height: '178px' }" mode="aspectFill"></image>
 			<view class="remain_wrapper">
 				<view class="remain_content_wrapper">
 					<view class="remain_title">当前余额(元)</view>
@@ -57,17 +58,15 @@
 .fund_mgt_wrapper {
 	padding: 8px;
 	.fund_mgt_card_wrapper {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 16px;
 		width: 100%;
 		height: 178px;
-		padding: 24px;
 		box-shadow: 0 2px 8px 0 rgba(87,147,250,0.50);
 		border-radius: 8px;
 		color: #FFFFFF;
-		background-image: url(../../static/imgs/account/bg.png);
-		background-size: cover;
 		.remain_wrapper {
 			position: relative;
 			flex: 1;
@@ -75,7 +74,7 @@
 			.remain_content_wrapper {
 				position: absolute;
 				left: 50%;
-				top: 50%;
+				top: 60%;
 				transform: translate(-50%, -50%);
 				.remain_title {
 					font-size: 12px;
@@ -94,8 +93,8 @@
 				.count_money_content_wrapper {
 					position: absolute;
 					left: 50%;
-					bottom: 0;
-					transform: translate(-50%, 0);
+					top: 50%;
+					transform: translate(-50%, -50%);
 					font-size: 12px;
 					font-family: monospace;
 					.count_money_title {
@@ -110,8 +109,8 @@
 				.count_commission_content_wrapper {
 					position: absolute;
 					left: 50%;
-					bottom: 0;
-					transform: translate(-50%, 0);
+					top: 50%;
+					transform: translate(-50%, -50%);
 					font-size: 12px;
 					font-family: monospace;
 					.count_commission_title {

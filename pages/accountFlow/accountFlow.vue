@@ -2,7 +2,7 @@
 	<view>
 		<view 
 			class="flow_item_wrapper"
-			v-for="(item, index) of flow"
+			v-for="(item, index) of flowList"
 			:key="index"
 		>
 			<u-sticky>
@@ -11,10 +11,10 @@
 			<flowItem
 				v-for="(it, idx) of item.dealList"
 				:key="idx"
-				:name="item.name"
-				:time="item.time"
-				:money="item.money"
-				:remain="item.remain"
+				:name="it.name"
+				:time="it.time"
+				:money="it.money"
+				:remain="it.remain"
 			></flowItem>
 		</view>
 	</view>
@@ -30,12 +30,12 @@
 		},
 		data() {
 			return {
-				flow: []
+				flowList: []
 			};
 		},
 		onLoad() {
 			for (let i = 0; i < flow.length; ++i) {
-				this.flow.push(flow[i])
+				this.flowList.push(flow[i])
 			}
 		}
 	}

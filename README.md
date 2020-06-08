@@ -20,6 +20,8 @@ Ignored attempt to cancel a touchmove event with cancelable=false, for example b
 
 ## 坑点
 图片千万别使用相对路径，使用绝对路径。
+微信小程序直接:style="dataObj"会被编译成"[object object]"
+微信小程序通过props传递Date类型时，会隐式转换成String，在原生js运行时是Object
 
 ## 滚动事件发生在父元素
 

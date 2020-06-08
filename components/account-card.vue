@@ -1,7 +1,7 @@
 <template>
 	<view class="card_wrapper" :style="[backgroundStyle, imgRotate]" @click="onCardClick">
 		<view class="card_content_wrapper">
-			<view v-show="this.rotateDeg > -90" class="card_info_wrapper">
+			<view v-show="rotateDeg > -90" class="card_info_wrapper">
 				<view class="card_img_wrapper">
 					<image class="center card_img_size" :src="imgUrl" mode="aspectFit"></image>
 				</view>
@@ -13,9 +13,9 @@
 						{{name}}
 					</view>
 				</view>
-				<view v-if="id" class="card_id_wrapper">{{account}}</view>
+				<view v-if="account" class="card_id_wrapper">{{account}}</view>
 			</view>
-			<view v-show="this.rotateDeg < -90" :style="btnStyle">提现</view>
+			<view v-show="rotateDeg < -90" class="card_back_btn">提现</view>
 		</view>
 	</view>
 </template>
@@ -33,20 +33,6 @@
 				rotateDeg: 0,
 				timerId: 0,
 				degStep: 6,
-				btnStyle: {
-					display: 'inline-block',
-					width: '50px',
-					height: '24px',
-					border: '1px solid #FFFFFF',
-					color: '#FFFFFF',
-					textAlign: 'center',
-					borderRadius: '4px',
-					lineHeight: '24px',
-					fontSize: '14px',
-					marginLeft: 'calc(50% - 25px)',
-					marginTop: '30px',
-					transform: 'rotateX(180deg)'
-				}
 			};
 		},
 		props: {
@@ -120,7 +106,6 @@
 		height: 100%;
 		.card_info_wrapper {
 			position: relative;
-			perspective: 800;
 			overflow:hidden;
 			height: 100%;
 			.card_img_wrapper {
@@ -156,6 +141,20 @@
 				font-size: 18px;
 				white-space: nowrap;
 			}
+		}
+		.card_back_btn {
+			display: 'inline-block';
+			width: 50px;
+			height: 24px;
+			border: 1px solid #FFFFFF;
+			color: #FFFFFF;
+			text-align: center;
+			border-radius: 4px;
+			line-height: 24px;
+			font-size: 14px;
+			margin-left: calc(50% - 25px);
+			margin-top: 30px;
+			transform: rotateX(180deg);
 		}
 	}
 }

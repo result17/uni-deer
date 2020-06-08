@@ -3,7 +3,7 @@
 		<view class="icon_bar">
 			<view class="right">
 				<u-icon class="bell" name="bell" size="48" @click="onBellIconClick"></u-icon>
-				<u-icon name="setting" size="48"></u-icon>
+				<u-icon class="setting" name="setting" size="48"></u-icon>
 			</view>
 		</view>
 		<view class="shop_info_wrapper">
@@ -20,7 +20,7 @@
 					</view>
 				</view>
 				<view class="shop_img">
-					<image :style="{width: '56px', height: '56px'}" src="../../static/imgs/shop/tx.png" mode="aspectFit"></image>
+					<image :style="{width: '56px', height: '56px'}" src="/static/imgs/shop/tx.png" mode="aspectFit"></image>
 				</view>
 			</view>
 		</view>
@@ -31,18 +31,18 @@
 			</view>
 			<view class="shop_account_icons_wrapper">
 				<view class="icon_wrapper" @click="onAccontFlowClick">
-					<image :style="iconSize" src="../../static/imgs/shop/zhls.png" mode="aspectFit"></image>
+					<image class="icon_size" src="/static/imgs/shop/zhls.png" mode="aspectFit"></image>
 					<view class="icon_title">账户流水</view>
 				</view>
 				<view class="icon_wrapper" @click="onFundMgtClick">
-					<image :style="iconSize" src="../../static/imgs/shop/zjgl.png" mode="aspectFit"></image>
+					<image class="icon_size" src="/static/imgs/shop/zjgl.png" mode="aspectFit"></image>
 					<view class="icon_title">资金管理</view>
 				</view>
 				<view class="icon_wrapper" @click="onGetCashClick">
-					<image :style="iconSize" src="../../static/imgs/shop/txzh.png" mode="aspectFit"></image>
+					<image class="icon_size"  src="/static/imgs/shop/txzh.png" mode="aspectFit"></image>
 					<view class="icon_title">提现账号</view>
 				</view>
-				<view class="icon_wrapper" :style="iconSize"></view>
+				<view class="icon_wrapper icon_size"></view>
 			</view>
 		</view>
 		<u-line></u-line>
@@ -52,12 +52,12 @@
 			</view>
 			<view class="shop_setting_content_wrapper">
 				<view class="icon_wrapper" @click="onShopSettingClick">
-					<image :style="iconSize" src="../../static/imgs/shop/dpsz.png" mode="aspectFit"></image>
+					<image class="icon_size" src="/static/imgs/shop/dpsz.png" mode="aspectFit"></image>
 					<view class="icon_title">店铺设置</view>
 				</view>
-				<view class="icon_wrapper" :style="iconSize"></view>
-				<view class="icon_wrapper" :style="iconSize"></view>
-				<view class="icon_wrapper" :style="iconSize"></view>
+				<view class="icon_wrapper icon_size"></view>
+				<view class="icon_wrapper icon_size"></view>
+				<view class="icon_wrapper icon_size"></view>
 			</view>
 		</view>
 	</view>
@@ -112,9 +112,18 @@
 		.right {
 			float: right;
 			.bell {
+				display: inline-flex;
 				margin-right: 16px;
 			}
+			.setting {
+				display: inline-flex;
+			}
 		}
+	}
+	.icon_size {
+		margin-left: 24px;
+		width: 40px;
+		height: 40px;
 	}
 	.shop_info_wrapper {
 		padding: 24px 0 8px 0;
