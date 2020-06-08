@@ -52,7 +52,9 @@
 			</u-cell-group>
 		</view>
 		<view class="shop_verify_wrapper">
-			<button type="primary" class="my_btn" @click="onVerifyBtnClick" :disabled="false">审核</button>
+			<view class="my_btn">
+				<u-button type="primary" @click="onVerifyBtnClick" :disabled="false">审核</u-button>
+			</view>
 		</view>
 		<view class="scopeActionSheet">
 			<u-action-sheet 
@@ -285,6 +287,6 @@
 	color: #999999;
 }
 .my_btn {
-	margin: 47px 5% 0px 5%;
+	margin: 48px 16px 0px 16px;
 }
 </style>

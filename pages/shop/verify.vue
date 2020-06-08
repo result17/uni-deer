@@ -9,7 +9,9 @@
 			<div class="shop_verify_enter_ins">{{second}}秒后进入主页面</div>
 		</view>
 		<view class="shop_verify_enter_wrapper">
-			<button type="primary" class="my_btn" @click="onVerifyBtnClick">进入</button>
+			<view class="my_btn">
+				<u-button type="primary" @click="onVerifyBtnClick">进入</u-button>
+			</view>
 		</view>
 	</view>
 </template>
@@ -63,7 +65,7 @@
 	color: #333333;
 }
 .my_btn {
-	margin: 16px 5% 0px 5%;
+	margin: 16px 16px 0px 16px;
 }
 .shop_verify_date, .shop_verify_enter_ins {
 	margin-top: 8px;
