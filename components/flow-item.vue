@@ -42,32 +42,32 @@
 </script>
 
 <style lang="scss" scoped>
-.flow_item_content_wrapper {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	height: 72px;
-	padding: 16px;
-	.left {
-		.flow_item_name {
-			color: #333333;
-			font-size: 14px;
-			margin-bottom: 8px;
+	.flow_item_content_wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 72px;
+		padding: 16px;
+		.left {
+			.flow_item_name {
+				color: #333333;
+				font-size: 14px;
+				margin-bottom: 8px;
+			}
+			.flow_item_time {
+				color: #999999;
+				font-size: 12px;
+			}
 		}
-		.flow_item_time {
-			color: #999999;
-			font-size: 12px;
+		.right {
+			.flow_item_money {
+				text-align: right;
+				margin-bottom: 8px;
+			}
+			.flow_item_remain {
+				color: #999999;
+				font-size: 12px;
+			}
 		}
 	}
-	.right {
-		.flow_item_money {
-			text-align: right;
-			margin-bottom: 8px;
-		}
-		.flow_item_remain {
-			color: #999999;
-			font-size: 12px;
-		}
-	}
-}
 </style>

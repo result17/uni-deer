@@ -90,28 +90,28 @@
 </script>
 
 <style lang="scss" scoped>
-.goods_spec_edit_wrapper {
-	padding: 20px 16px;
-	.goods_name_edit_wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		.goods_name {
-			color: #333333;
-			font-size: 24px;
-			font-weight: 600;
-			margin-bottom: 8px;
-		}
-		.goods_name_edit_tips {
-			color: #999999;
-			font-size: 14px;
-			.edit_fonts {
-				color: $deer-main-theme;
+	.goods_spec_edit_wrapper {
+		padding: 20px 16px;
+		.goods_name_edit_wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.goods_name {
+				color: #333333;
+				font-size: 24px;
+				font-weight: 600;
+				margin-bottom: 8px;
+			}
+			.goods_name_edit_tips {
+				color: #999999;
+				font-size: 14px;
+				.edit_fonts {
+					color: $deer-main-theme;
+				}
 			}
 		}
 	}
-}
-.modal_content {
-	margin: 16px 36px;
-}
+	.modal_content {
+		margin: 16px 36px;
+	}
 </style>

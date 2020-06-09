@@ -152,38 +152,38 @@
 </script>
 
 <style lang="scss" scoped>
-.stat_to_delived_wrapper {
-	padding: 16px;
-	.stat_to_delived_title_wrapper {
-		color: #333333;
-		font-size: 24px;
-		font-weight: 600;
-		margin-bottom: 32px;
-	}
-	.stat_to_delived_date_wrapper {
-		width: 100%;
-		height: 24px;
-		color: #666666;
-		font-size: 16px;
-		margin-bottom: 32px;
-		.year_wrapper {
-			margin-right: 28px;
-		}
-		.month_wrapper {
-			margin: 0 28px;
-		}
-		.day_wrapper {
-			margin-left: 28px;
-		}
-	}
-	.goods_rank_wrapper {
-		margin-top: 36px;
-		.goods_rank_title_wrappr {
+	.stat_to_delived_wrapper {
+		padding: 16px;
+		.stat_to_delived_title_wrapper {
 			color: #333333;
-			font-size: 18px;
+			font-size: 24px;
 			font-weight: 600;
-			margin-bottom: 16px;
+			margin-bottom: 32px;
+		}
+		.stat_to_delived_date_wrapper {
+			width: 100%;
+			height: 24px;
+			color: #666666;
+			font-size: 16px;
+			margin-bottom: 32px;
+			.year_wrapper {
+				margin-right: 28px;
+			}
+			.month_wrapper {
+				margin: 0 28px;
+			}
+			.day_wrapper {
+				margin-left: 28px;
+			}
+		}
+		.goods_rank_wrapper {
+			margin-top: 36px;
+			.goods_rank_title_wrappr {
+				color: #333333;
+				font-size: 18px;
+				font-weight: 600;
+				margin-bottom: 16px;
+			}
 		}
 	}
-}
 </style>

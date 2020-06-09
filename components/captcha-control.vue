@@ -61,36 +61,36 @@
 </script>
 
 <style lang="scss">
-.captcha_wrapper {
-	position: relative;
-}
-.my_input {
-	margin: 0 16px;
-	min-height: 50px;
-	border-bottom: 1px solid #eeeeee;
-}
-.captcha_icon_wrapper {
-	display: inline-block;
-	position: absolute;
-	right: 90px;
-	bottom: 12px;
-}
-.captcha_get_wrapper {
-	display: inline-block;
-	position: absolute;
-	right: 24px;
-	bottom: 14px;
-}
-.captcha_get_btn {
-	padding: 3px;
-	border: 1px solid #689EFD;
-	font-size: 12px;
-	color: #689EFD;
-}
-.captcha_sent_btn {
-	color: #FFFFFF;
-	background: #CCCCCC;
-	font-size: 12px;
-	padding: 3px;
-}
+	.captcha_wrapper {
+		position: relative;
+	}
+	.my_input {
+		margin: 0 16px;
+		min-height: 50px;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.captcha_icon_wrapper {
+		display: inline-block;
+		position: absolute;
+		right: 90px;
+		bottom: 12px;
+	}
+	.captcha_get_wrapper {
+		display: inline-block;
+		position: absolute;
+		right: 24px;
+		bottom: 14px;
+	}
+	.captcha_get_btn {
+		padding: 3px;
+		border: 1px solid #689EFD;
+		font-size: 12px;
+		color: #689EFD;
+	}
+	.captcha_sent_btn {
+		color: #FFFFFF;
+		background: #CCCCCC;
+		font-size: 12px;
+		padding: 3px;
+	}
 </style>

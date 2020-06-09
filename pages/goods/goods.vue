@@ -103,31 +103,31 @@
 </script>
 
 <style lang="scss" scoped>
-.goods_page_wrapper {
-	padding: 16px;
-}
-.top_icons_wrapper {
-	display: flex;
-	justify-content: flex-end;
-	width: 100%;
-	height: 28px;
-}
-.category_list_wrapper {
-	padding: 24px 24px 0 24px;
-}
-.selected_category_wrapper {
-	width: 100%;
-	height: 36px;
-}
-.selected_category {
-	color: #333333;
-	font-size: 24px;
-	margin-right: 8px;
-}
-.category_list_item {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 24px;
-}
+	.goods_page_wrapper {
+		padding: 16px;
+	}
+	.top_icons_wrapper {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		height: 28px;
+	}
+	.category_list_wrapper {
+		padding: 24px 24px 0 24px;
+	}
+	.selected_category_wrapper {
+		width: 100%;
+		height: 36px;
+	}
+	.selected_category {
+		color: #333333;
+		font-size: 24px;
+		margin-right: 8px;
+	}
+	.category_list_item {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 24px;
+	}
 </style>

@@ -55,70 +55,70 @@
 </script>
 
 <style lang="scss" scoped>
-.fund_mgt_wrapper {
-	padding: 8px;
-	.fund_mgt_card_wrapper {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 16px;
-		width: 100%;
-		height: 178px;
-		box-shadow: 0 2px 8px 0 rgba(87,147,250,0.50);
-		border-radius: 8px;
-		color: #FFFFFF;
-		.remain_wrapper {
+	.fund_mgt_wrapper {
+		padding: 8px;
+		.fund_mgt_card_wrapper {
 			position: relative;
-			flex: 1;
-			text-align: center;
-			.remain_content_wrapper {
-				position: absolute;
-				left: 50%;
-				top: 60%;
-				transform: translate(-50%, -50%);
-				.remain_title {
-					font-size: 12px;
-					margin-bottom: 8px;
-					font-family: monospace;
-				}
-			}
-		}
-		.count_wrapper {
 			display: flex;
-			flex: 1;
-			.count_money_wrapper {
+			flex-direction: column;
+			margin-bottom: 16px;
+			width: 100%;
+			height: 178px;
+			box-shadow: 0 2px 8px 0 rgba(87,147,250,0.50);
+			border-radius: 8px;
+			color: #FFFFFF;
+			.remain_wrapper {
 				position: relative;
 				flex: 1;
 				text-align: center;
-				.count_money_content_wrapper {
+				.remain_content_wrapper {
 					position: absolute;
 					left: 50%;
-					top: 50%;
+					top: 60%;
 					transform: translate(-50%, -50%);
-					font-size: 12px;
-					font-family: monospace;
-					.count_money_title {
+					.remain_title {
+						font-size: 12px;
 						margin-bottom: 8px;
+						font-family: monospace;
 					}
 				}
 			}
-			.count_commission_wrapper {
-				position: relative;
+			.count_wrapper {
+				display: flex;
 				flex: 1;
-				text-align: center;
-				.count_commission_content_wrapper {
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					transform: translate(-50%, -50%);
-					font-size: 12px;
-					font-family: monospace;
-					.count_commission_title {
-						margin-bottom: 8px;
+				.count_money_wrapper {
+					position: relative;
+					flex: 1;
+					text-align: center;
+					.count_money_content_wrapper {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						font-size: 12px;
+						font-family: monospace;
+						.count_money_title {
+							margin-bottom: 8px;
+						}
+					}
+				}
+				.count_commission_wrapper {
+					position: relative;
+					flex: 1;
+					text-align: center;
+					.count_commission_content_wrapper {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						font-size: 12px;
+						font-family: monospace;
+						.count_commission_title {
+							margin-bottom: 8px;
+						}
 					}
 				}
 			}
 		}
 	}
-}
 </style>

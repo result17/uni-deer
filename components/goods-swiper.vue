@@ -212,8 +212,8 @@
 </script>
 
 <style lang="scss" scoped>
-.goods_list_wrapper {
-	width: 100%;
-	height: auto;
-}
+	.goods_list_wrapper {
+		width: 100%;
+		height: auto;
+	}
 </style>

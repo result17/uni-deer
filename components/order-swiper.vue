@@ -88,16 +88,16 @@
 </script>
 
 <style lang="scss" scoped>
-.order_swiper_wrapper {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	height: 80px;
-	background-image: url(../static/imgs/order/order_bg1.png);
-	background-size: contain;
-}
-.scroll_list_wrapper {
-	margin: auto;
-	width: calc(100vw - 32px);
-}
+	.order_swiper_wrapper {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 80px;
+		background-image: url(../static/imgs/order/order_bg1.png);
+		background-size: contain;
+	}
+	.scroll_list_wrapper {
+		margin: auto;
+		width: calc(100vw - 32px);
+	}
 </style>

@@ -83,58 +83,58 @@
 </script>
 
 <style lang="scss" scoped>
-.captcha_title {
-	margin-top: 20px;
-	margin-left: 16px;
-	margin-bottom: 16px;
-	font-size: 26px;
-}
-.my_input {
-	margin: 0 16px;
-	min-height: 50px;
-	border-bottom: 1px solid #eeeeee;
-}
-.my_placeholder {
-	font-size: 14px;
-	color: #999999;
-}
-.captcha_btn {
-	padding: 16px;
-}
-.my_btn {
-	margin-bottom: 8px;
-}
-.captcha_tips {
-	margin-top: 9px;
-	margin-left: 16px;
-	margin-bottom: 24px;
-}
-.tips_context {
-	font-size: 12px;
-	color: #999999;
-}
-.tips_sign_up_link {
-	color: #FF4759;
-}
-.forgot_password {
-	float: right;
-	margin-right: 16px;
-	margin-bottom: 16px;
-	font-size: 12px;
-	color: #999999;
-}
-.captcha_msg {
-	margin-top: 44px;
-	position: relative;
-}
-.captcha_error_msg {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: 6px 12px;
-	border-radius: 14px;
-	font-size: 14px;
-	color: #FFFFFF;
-	background: #777777;
-}
+	.captcha_title {
+		margin-top: 20px;
+		margin-left: 16px;
+		margin-bottom: 16px;
+		font-size: 26px;
+	}
+	.my_input {
+		margin: 0 16px;
+		min-height: 50px;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.my_placeholder {
+		font-size: 14px;
+		color: #999999;
+	}
+	.captcha_btn {
+		padding: 16px;
+	}
+	.my_btn {
+		margin-bottom: 8px;
+	}
+	.captcha_tips {
+		margin-top: 9px;
+		margin-left: 16px;
+		margin-bottom: 24px;
+	}
+	.tips_context {
+		font-size: 12px;
+		color: #999999;
+	}
+	.tips_sign_up_link {
+		color: #FF4759;
+	}
+	.forgot_password {
+		float: right;
+		margin-right: 16px;
+		margin-bottom: 16px;
+		font-size: 12px;
+		color: #999999;
+	}
+	.captcha_msg {
+		margin-top: 44px;
+		position: relative;
+	}
+	.captcha_error_msg {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 6px 12px;
+		border-radius: 14px;
+		font-size: 14px;
+		color: #FFFFFF;
+		background: #777777;
+	}
 </style>

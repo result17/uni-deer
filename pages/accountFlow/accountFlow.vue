@@ -42,8 +42,8 @@
 </script>
 
 <style lang="scss" scoped>
-.date_wrapper {
-	padding: 0 16px;
-	background: #EDEDED;
-}
+	.date_wrapper {
+		padding: 0 16px;
+		background: #EDEDED;
+	}
 </style>

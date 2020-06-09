@@ -3,7 +3,7 @@
 		<view v-if="isLogin">
 			<order-title-header></order-title-header>
 			<order-swiper></order-swiper>
-			<view @mousewheel.stop.prevent></my-popup-action-list>>
+			<view @mousewheel.stop.prevent>
 				<my-popup-action-list v-if="showPayMethodsList" @touchmove.stop.prevent></my-popup-action-list>
 			</view>
 		</view>
@@ -59,9 +59,9 @@
 </script>
 
 <style lang="scss" scoped>
-.order_scroll_wrapper {
-	width: 100%;
-	height: 100vh;
-	margin-top: 10px;
-}
+	.order_scroll_wrapper {
+		width: 100%;
+		height: 100vh;
+		margin-top: 10px;
+	}
 </style>

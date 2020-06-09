@@ -51,20 +51,20 @@
 </script>
 
 <style lang="scss" scoped>
-.goods_detailed_title, .goods_detailed_count {
-	color: #333333;
-	font-size: 12px;
-	font-weight: 600;
-}
-.goods_detailed_subtitile {
-	color: #999999;
-	font-size: 10px;
-	margin: 4px 0 8px 0;
-}
-.goods_tags_wrapper {
-	margin-bottom: 16px;
-}
-.goods_tag {
-	align-self: baseline;
-}
+	.goods_detailed_title, .goods_detailed_count {
+		color: #333333;
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.goods_detailed_subtitile {
+		color: #999999;
+		font-size: 10px;
+		margin: 4px 0 8px 0;
+	}
+	.goods_tags_wrapper {
+		margin-bottom: 16px;
+	}
+	.goods_tag {
+		align-self: baseline;
+	}
 </style>

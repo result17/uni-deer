@@ -49,7 +49,7 @@
 </script>
 
 <style lang="scss" scoped>
-.date_time {
+	.date_time {
 	margin-right: 8px;
-}
+	}
 </style>

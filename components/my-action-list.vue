@@ -31,25 +31,25 @@
 </script>
 
 <style lang="scss" scoped>
-.my_action_list_item {
-	position: relative;
-	width: 100%;
-	height: 42px;
-	line-height: 42px;
-}
-.my_action_list_item_context {
-	padding-left: 16px;
-}
-.active_color {
-	color: #4688FA;
-}
-.unactive_color {
-	color: #333333;
-}
-.icon {
-	position: absolute;
-	right: 16px;
-	top: 50%;
-	transform: translateY(-50%);
+	.my_action_list_item {
+		position: relative;
+		width: 100%;
+		height: 42px;
+		line-height: 42px;
+	}
+	.my_action_list_item_context {
+		padding-left: 16px;
+	}
+	.active_color {
+		color: #4688FA;
+	}
+	.unactive_color {
+		color: #333333;
+	}
+	.icon {
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform: translateY(-50%);
 }
 </style>

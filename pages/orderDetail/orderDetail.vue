@@ -158,96 +158,96 @@
 </script>
 
 <style lang="scss" scoped>
-.order_detail_title_wrapper {
-	margin: 0 0 32px 16px;
-}
-.order_detail_title {
-	color: #333333;
-	font-size: 24px;
-	font-weight: 600;
-}
-.order_detail_client_wrapper {
-	margin: 0 16px 32px 16px;
-}
-.client_title_wrapper {
-	margin-bottom: 16px;
-}
-.client_title, .goods_info_title, .order_info_title {
-	color: #333333;
-	font-size: 18px;
-	font-weight: 600;
-}
-.client_context_wrapper {
-	overflow: hidden;
-}
-.context_left_wrapper {
-	float: left;
-	overflow: hidden;
-	margin-bottom: 8px;
-}
-.context_right_wrapper, .context_info_wrapper {
-	float: right;
-}
-.context_info_wrapper {
-	margin-left: 8px;
-	color: #333333;
-	font-size: 14px;
-}
-.client_name {
-	margin-bottom: 8px;
-}
-.context_address_wrapper {
-	clear: both;
-}
-.context_address_wrapper {
-	color: #333333;
-	font-size: 14px;
-}
-.address_prov {
-	margin: 0 8px;
-}
-.address_dist, .address_detail {
-	margin-right: 8px;
-}
-.goods_detailed_info_wrapper {
-	margin-top: 16px;
-}
-.order_goods_info_wrapper {
-	margin: 0 16px;
-}
-.goods_info_context_item_wrapper {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 16px;
-}
-.item_info {
-	color: #333333;
-	font-size: 14px;
-}
-.item_cost, .item_context {
-	@extend .item_info;
-	font-weight: 500;
-}
-.item_discount {
-	@extend .item_cost;
-	color: #FF4759;
-}
-.order_info_wrapper {
-	margin: 32px 16px 0 16px;
-}
-.order_info_context_wrapper {
-	margin-top: 16px;
-}
-.order_info_context_item {
-	margin-bottom: 8px;
-}
-.item_label {
-	color: #999999;
-	font-size: 14px;
-}
-.order_info_btn_wrapper {
-	display: flex;
-	margin: 16px 16px 8px 16px;
-	justify-content: space-between;
-}
+	.order_detail_title_wrapper {
+		margin: 0 0 32px 16px;
+	}
+	.order_detail_title {
+		color: #333333;
+		font-size: 24px;
+		font-weight: 600;
+	}
+	.order_detail_client_wrapper {
+		margin: 0 16px 32px 16px;
+	}
+	.client_title_wrapper {
+		margin-bottom: 16px;
+	}
+	.client_title, .goods_info_title, .order_info_title {
+		color: #333333;
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.client_context_wrapper {
+		overflow: hidden;
+	}
+	.context_left_wrapper {
+		float: left;
+		overflow: hidden;
+		margin-bottom: 8px;
+	}
+	.context_right_wrapper, .context_info_wrapper {
+		float: right;
+	}
+	.context_info_wrapper {
+		margin-left: 8px;
+		color: #333333;
+		font-size: 14px;
+	}
+	.client_name {
+		margin-bottom: 8px;
+	}
+	.context_address_wrapper {
+		clear: both;
+	}
+	.context_address_wrapper {
+		color: #333333;
+		font-size: 14px;
+	}
+	.address_prov {
+		margin: 0 8px;
+	}
+	.address_dist, .address_detail {
+		margin-right: 8px;
+	}
+	.goods_detailed_info_wrapper {
+		margin-top: 16px;
+	}
+	.order_goods_info_wrapper {
+		margin: 0 16px;
+	}
+	.goods_info_context_item_wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 16px;
+	}
+	.item_info {
+		color: #333333;
+		font-size: 14px;
+	}
+	.item_cost, .item_context {
+		@extend .item_info;
+		font-weight: 500;
+	}
+	.item_discount {
+		@extend .item_cost;
+		color: #FF4759;
+	}
+	.order_info_wrapper {
+		margin: 32px 16px 0 16px;
+	}
+	.order_info_context_wrapper {
+		margin-top: 16px;
+	}
+	.order_info_context_item {
+		margin-bottom: 8px;
+	}
+	.item_label {
+		color: #999999;
+		font-size: 14px;
+	}
+	.order_info_btn_wrapper {
+		display: flex;
+		margin: 16px 16px 8px 16px;
+		justify-content: space-between;
+	}
 </style>

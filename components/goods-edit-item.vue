@@ -73,43 +73,43 @@
 </script>
 
 <style lang="scss" scoped>
-// 设置统一子元素高度
-.row_wrapper > * {
-	height: 72px;
-}
-.goods_edit_content_wrapper {
-	position: relative;
-	font-size: 14px;
-	color: #333333;
-	.goods_cost {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+	// 设置统一子元素高度
+	.row_wrapper > * {
+		height: 72px;
 	}
-}
-.goods_money_wrapper {
-	position: relative;
-	font-size: 12px;
-	color: #333333;
-	.money {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+	.goods_edit_content_wrapper {
+		position: relative;
+		font-size: 14px;
+		color: #333333;
+		.goods_cost {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
 	}
-}
-.goods_amount_wrapper {
-	position: relative;
-	font-size: 12px;
-	color: #333333;
-	.amount {
-		position: absolute;
-		left: 0;
-		top: 0;
+	.goods_money_wrapper {
+		position: relative;
+		font-size: 12px;
+		color: #333333;
+		.money {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
 	}
-	.minBuyNum {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+	.goods_amount_wrapper {
+		position: relative;
+		font-size: 12px;
+		color: #333333;
+		.amount {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.minBuyNum {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
 	}
-}
 </style>

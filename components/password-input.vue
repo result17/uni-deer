@@ -59,18 +59,18 @@
 </script>
 
 <style lang="scss" scoped>
-.password_wrapper {
-	position: relative;
-}
-.password_icon_wrapper {
-	display: inline-block;
-	position: absolute;
-	right: 24px;
-	bottom: 12px;
-}
-.my_input {
-	margin: 0 16px;
-	min-height: 50px;
-	border-bottom: 1px solid #eeeeee;
-}
+	.password_wrapper {
+		position: relative;
+	}
+	.password_icon_wrapper {
+		display: inline-block;
+		position: absolute;
+		right: 24px;
+		bottom: 12px;
+	}
+	.my_input {
+		margin: 0 16px;
+		min-height: 50px;
+		border-bottom: 1px solid #eeeeee;
+	}
 </style>

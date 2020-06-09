@@ -94,8 +94,8 @@
 </script>
 
 <style lang="scss" scoped>
-.charts {
-	width: 100%;
-	height: 250px;
-}
+	.charts {
+		width: 100%;
+		height: 250px;
+	}
 </style>

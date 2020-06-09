@@ -54,23 +54,23 @@
 </script>
 
 <style lang="scss" scoped>
-.sign_up_title_wrapper {
-	text-align: center;
-	margin-top: 20px;
-}
-.sign_up_title {
-	font-size: 26px;
-}
-.my_input {
-	margin: 0 16px;
-	min-height: 50px;
-	border-bottom: 1px solid #eeeeee;
-}
-.sign_up_btn {
-	margin-top: 20px;
-	padding: 16px;
-}
-.my_btn {
-	margin-bottom: 8px;
-}
+	.sign_up_title_wrapper {
+		text-align: center;
+		margin-top: 20px;
+	}
+	.sign_up_title {
+		font-size: 26px;
+	}
+	.my_input {
+		margin: 0 16px;
+		min-height: 50px;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.sign_up_btn {
+		margin-top: 20px;
+		padding: 16px;
+	}
+	.my_btn {
+		margin-bottom: 8px;
+	}
 </style>

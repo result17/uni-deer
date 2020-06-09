@@ -45,7 +45,7 @@
 </script>
 
 <style lang="scss" scoped>
-.get_cash_wrapper {
-	padding: 16px;
-}
+	.get_cash_wrapper {
+		padding: 16px;
+	}
 </style>

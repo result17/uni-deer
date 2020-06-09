@@ -91,62 +91,62 @@
 </script>
 
 <style lang="scss" scoped>
-.stat_header_wrapper {
-	position: relative;
-	width: 100%;
-	height: 72px;
-	.stat_header {
-		position: absolute;
-		left: 16px;
-		bottom: 16px;
-		color: #FFFFFF;
-		font-size: 26px;
-	}
-}
-.stat_info_wrapper {
-	width: 100%;
-	height: 120px;
-	padding: 0 16px;
-	background-image: url(../../static/imgs/statistic/statistic_bg1.png);
-	background-size: contain;
-	.stat_info {
-		display: flex;
-		wdith: 100%;
-		height: 120px;
-		background: #FFFFFF;
-		border-radius: 8px;
-		box-shadow: 0 2px 8px 0 rgba(220,231,250,0.50);
-		.neworder_wrapper, .todeliver_wrapper, .today_total_amount_wrapper {
-			position: relative;
-			flex: 1;
-			height: 100%;
+	.stat_header_wrapper {
+		position: relative;
+		width: 100%;
+		height: 72px;
+		.stat_header {
+			position: absolute;
+			left: 16px;
+			bottom: 16px;
+			color: #FFFFFF;
+			font-size: 26px;
 		}
 	}
-}
-.stat_info_content_wrapper {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-.stat_info_title {
-	color: #999999;
-	font-size: 12px;
-	margin-bottom: 16px;
-	white-space: nowrap;
-}
-.stat_info_amount {
-	color: #333333;
-	font-size: 18px;
-	text-align: center;
-}
-.stat_charts_wrapper {
-	padding: 0 16px;
-	.stat_charts_title_wrapper {
-		margin: 32px 0 16px 0;
+	.stat_info_wrapper {
+		width: 100%;
+		height: 120px;
+		padding: 0 16px;
+		background-image: url(../../static/imgs/statistic/statistic_bg1.png);
+		background-size: contain;
+		.stat_info {
+			display: flex;
+			width: 100%;
+			height: 120px;
+			background: #FFFFFF;
+			border-radius: 8px;
+			box-shadow: 0 2px 8px 0 rgba(220,231,250,0.50);
+			.neworder_wrapper, .todeliver_wrapper, .today_total_amount_wrapper {
+				position: relative;
+				flex: 1;
+				height: 100%;
+			}
+		}
+	}
+	.stat_info_content_wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.stat_info_title {
+		color: #999999;
+		font-size: 12px;
+		margin-bottom: 16px;
+		white-space: nowrap;
+	}
+	.stat_info_amount {
 		color: #333333;
 		font-size: 18px;
-		font-weight: 600;
+		text-align: center;
 	}
-}
+	.stat_charts_wrapper {
+		padding: 0 16px;
+		.stat_charts_title_wrapper {
+			margin: 32px 0 16px 0;
+			color: #333333;
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
 </style>

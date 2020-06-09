@@ -16,3 +16,5 @@ todo~
 		padding: 34rpx 0;
 }
 ```
+### helpme
+仓库的[helpme](./HELPME.md)文档记录编码时遇到的问题和解决方法。

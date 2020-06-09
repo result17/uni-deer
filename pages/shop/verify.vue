@@ -2,7 +2,7 @@
 	<view>
 		<view class="shop_verify_status_wrapper">
 			<view class="shop_verify_status_img_wrapper">
-				<image :style="{width: '80px', height: '80px'}"class="shop_verify_status_img" src="../../static/imgs/store/icon_success.png"></image>
+				<image :style="{width: '80px', height: '80px'}" class="shop_verify_status_img" src="../../static/imgs/store/icon_success.png"></image>
 			</view>
 			<div class="shop_verify_status_title">恭喜，店铺资料审核成功</div>
 			<div class="shop_verify_date">2020-05-20 15:20:20</div>
@@ -52,24 +52,24 @@
 </script>
 
 <style lang="scss" scoped>
-.shop_verify_status_wrapper {
-	margin-top: 57px;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
-}
-.shop_verify_status_title {
-	margin-top: 24px;
-	font-size: 16px;
-	color: #333333;
-}
-.my_btn {
-	margin: 16px 16px 0px 16px;
-}
-.shop_verify_date, .shop_verify_enter_ins {
-	margin-top: 8px;
-	font-size: 12px;
-	color: #999999;
-}
+	.shop_verify_status_wrapper {
+		margin-top: 57px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.shop_verify_status_title {
+		margin-top: 24px;
+		font-size: 16px;
+		color: #333333;
+	}
+	.my_btn {
+		margin: 16px 16px 0px 16px;
+	}
+	.shop_verify_date, .shop_verify_enter_ins {
+		margin-top: 8px;
+		font-size: 12px;
+		color: #999999;
+	}
 </style>

@@ -62,7 +62,7 @@
 </script>
 
 <style lang="scss" scoped>
-.message_page {
-	padding: 16px;
-}
+	.message_page {
+		padding: 16px;
+	}
 </style>

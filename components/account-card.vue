@@ -95,74 +95,74 @@
 </script>
 
 <style lang="scss" scoped>
-.card_wrapper {
-	margin-bottom: 16px;
-	width: 100%;
-	height: 136px;
-	padding: 24px;
-	box-shadow: 0 2px 8px 0 rgba(220, 231, 250, .7);
-	border-radius: 8px;
-	.card_content_wrapper {
-		overflow: hidden;
-		height: 100%;
-		.card_info_wrapper {
-			position: relative;
-			overflow:hidden;
+	.card_wrapper {
+		margin-bottom: 16px;
+		width: 100%;
+		height: 136px;
+		padding: 24px;
+		box-shadow: 0 2px 8px 0 rgba(220, 231, 250, .7);
+		border-radius: 8px;
+		.card_content_wrapper {
+			overflow: hidden;
 			height: 100%;
-			.card_img_wrapper {
-				float: left;
+			.card_info_wrapper {
 				position: relative;
-				background: #FFFFFF;
-				width: 50px;
-				height: 50px;
-				border-radius: 999px;
-				.card_img_size {
-					width: 40px;
-					height: 40px;
+				overflow:hidden;
+				height: 100%;
+				.card_img_wrapper {
+					float: left;
+					position: relative;
+					background: #FFFFFF;
+					width: 50px;
+					height: 50px;
+					border-radius: 999px;
+					.card_img_size {
+						width: 40px;
+						height: 40px;
+					}
 				}
-			}
-			.card_text_wrapper {
-				float: left;
-				margin-left: 12px;
-				color: #FFFFFF;
-				.card_type_wrapper {
+				.card_text_wrapper {
+					float: left;
+					margin-left: 12px;
+					color: #FFFFFF;
+					.card_type_wrapper {
+						font-size: 18px;
+					}
+					.card_name_wrapper {
+						margin-top: 4px;
+						font-size: 12px;
+					}
+				}
+				.card_id_wrapper {
+					position: absolute;
+					left: 50%;
+					bottom: 0;
+					transform: translateX(-50%);
+					color: #FFFFFF;
 					font-size: 18px;
-				}
-				.card_name_wrapper {
-					margin-top: 4px;
-					font-size: 12px;
+					white-space: nowrap;
 				}
 			}
-			.card_id_wrapper {
-				position: absolute;
-				left: 50%;
-				bottom: 0;
-				transform: translateX(-50%);
+			.card_back_btn {
+				display: 'inline-block';
+				width: 50px;
+				height: 24px;
+				border: 1px solid #FFFFFF;
 				color: #FFFFFF;
-				font-size: 18px;
-				white-space: nowrap;
+				text-align: center;
+				border-radius: 4px;
+				line-height: 24px;
+				font-size: 14px;
+				margin-left: calc(50% - 25px);
+				margin-top: 30px;
+				transform: rotateX(180deg);
 			}
-		}
-		.card_back_btn {
-			display: 'inline-block';
-			width: 50px;
-			height: 24px;
-			border: 1px solid #FFFFFF;
-			color: #FFFFFF;
-			text-align: center;
-			border-radius: 4px;
-			line-height: 24px;
-			font-size: 14px;
-			margin-left: calc(50% - 25px);
-			margin-top: 30px;
-			transform: rotateX(180deg);
 		}
 	}
-}
-.center {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
+	.center {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
 </style>

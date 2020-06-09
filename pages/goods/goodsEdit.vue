@@ -150,32 +150,32 @@
 </script>
 
 <style lang="scss" scoped>
-.goods_edit_wrapper {
-	padding: 20px 16px;
-}
-.base_info_title_wrapper {
-	color: #333333;
-	font-size: 18px;
-	margin-bottom: 16px;
-}
-.img_picker_wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.img_picker_tips {
-	margin: 8px 0 16px 0;
-	color: #999999;
-	font-size: 14px
-}
-.discount_info_title_wrapper, .spec_info_title_wrapper {
-	margin: 32px 0 16px 0;
-}
-.spec_info_title_wrapper {
-	margin-bottom: 16px;
-}
-.discount_info_title, .spec_info_title {
-	color: #333333;
-	font-size: 18px;
-}
+	.goods_edit_wrapper {
+		padding: 20px 16px;
+	}
+	.base_info_title_wrapper {
+		color: #333333;
+		font-size: 18px;
+		margin-bottom: 16px;
+	}
+	.img_picker_wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.img_picker_tips {
+		margin: 8px 0 16px 0;
+		color: #999999;
+		font-size: 14px
+	}
+	.discount_info_title_wrapper, .spec_info_title_wrapper {
+		margin: 32px 0 16px 0;
+	}
+	.spec_info_title_wrapper {
+		margin-bottom: 16px;
+	}
+	.discount_info_title, .spec_info_title {
+		color: #333333;
+		font-size: 18px;
+	}
 </style>

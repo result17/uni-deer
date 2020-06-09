@@ -27,18 +27,18 @@
 </script>
 
 <style lang="scss" scoped>
-.btn_wrapper {
-	overflow: hidden;
-	.btn_content_wrapper {
-		padding: 16px 0;
-		.left {
-			float: left;
-			font-size: 16px;
-			color: #333333;
-		}
-		.right {
-			float: right;
+	.btn_wrapper {
+		overflow: hidden;
+		.btn_content_wrapper {
+			padding: 16px 0;
+			.left {
+				float: left;
+				font-size: 16px;
+				color: #333333;
+			}
+			.right {
+				float: right;
+			}
 		}
 	}
-}
 </style>

@@ -141,49 +141,49 @@
 </script>
 
 <style lang="scss" scoped>
-.shop_setting_wrapper {
-	padding: 16px;
-	.setting_header_wrapper {
-		overflow: hidden;
-		margin-bottom: 32px;
-		.left {
-			float: left;
-			.header_text {
-				color: #333333;
-				font-size: 18px;
-				font-weight: 600;
+	.shop_setting_wrapper {
+		padding: 16px;
+		.setting_header_wrapper {
+			overflow: hidden;
+			margin-bottom: 32px;
+			.left {
+				float: left;
+				.header_text {
+					color: #333333;
+					font-size: 18px;
+					font-weight: 600;
+				}
+			}
+			.right {
+				float: right;
 			}
 		}
-		.right {
-			float: right;
-		}
-	}
-	.base_setting_wrapper {
-		color: #333333;
-		margin-bottom: 16px;
-		.base_setting_header_wrapper {
-			font-size: 14px;
-			font-weight: 600;
+		.base_setting_wrapper {
+			color: #333333;
 			margin-bottom: 16px;
+			.base_setting_header_wrapper {
+				font-size: 14px;
+				font-weight: 600;
+				margin-bottom: 16px;
+			}
 		}
-	}
-	.freight_fees_setting_wrapper {
-		color: #333333;
-		margin-bottom: 16px;
-		.freight_fees_seetting_header_wrapper {
-			font-size: 14px;
-			font-weight: 600;
+		.freight_fees_setting_wrapper {
+			color: #333333;
 			margin-bottom: 16px;
+			.freight_fees_seetting_header_wrapper {
+				font-size: 14px;
+				font-weight: 600;
+				margin-bottom: 16px;
+			}
 		}
-	}
-	.contact_info_wrapper {
-		color: #333333;
-		margin-bottom: 16px;
-		.contact_info_header_wrapper {
-			font-size: 14px;
-			font-weight: 600;
+		.contact_info_wrapper {
+			color: #333333;
 			margin-bottom: 16px;
+			.contact_info_header_wrapper {
+				font-size: 14px;
+				font-weight: 600;
+				margin-bottom: 16px;
+			}
 		}
 	}
-}
 </style>

@@ -105,95 +105,95 @@
 </script>
 
 <style lang="scss" scoped>
-.shop_status_wrapper {
-	padding: 16px;
-	.icon_bar {
-		overflow: hidden;
-		.right {
-			float: right;
-			.bell {
-				display: inline-flex;
-				margin-right: 16px;
-			}
-			.setting {
-				display: inline-flex;
+	.shop_status_wrapper {
+		padding: 16px;
+		.icon_bar {
+			overflow: hidden;
+			.right {
+				float: right;
+				.bell {
+					display: inline-flex;
+					margin-right: 16px;
+				}
+				.setting {
+					display: inline-flex;
+				}
 			}
 		}
-	}
-	.icon_size {
-		margin-left: 24px;
-		width: 40px;
-		height: 40px;
-	}
-	.shop_info_wrapper {
-		padding: 24px 0 8px 0;
-		.info_content {
-			display: flex;
-			justify-content: space-between;
-			& > * {
-				height: 56px;
+		.icon_size {
+			margin-left: 24px;
+			width: 40px;
+			height: 40px;
+		}
+		.shop_info_wrapper {
+			padding: 24px 0 8px 0;
+			.info_content {
+				display: flex;
+				justify-content: space-between;
+				& > * {
+					height: 56px;
+				}
+				.shop_info_name {
+					color: #333333;
+					font-size: 20px;
+					font-weight: 600;
+				}
+				.shop_info_account_wrapper {
+					margin-top: 8px;
+					font-size: 12px;
+					.shop_info_account_tag {
+						display: inline-block;
+						margin-right: 8px;
+						text-align: center;
+						border-radius: 10px;
+						width: 40px;
+						color: #FFFFFF;
+						background:  linear-gradient(45deg, #5793FA, #5758FA);
+					}
+				}
 			}
-			.shop_info_name {
+		}
+		.shop_account_wrapper {
+			margin-top: 18px;
+			.shop_account_title {
 				color: #333333;
-				font-size: 20px;
+				font-size: 18px;
 				font-weight: 600;
 			}
-			.shop_info_account_wrapper {
-				margin-top: 8px;
-				font-size: 12px;
-				.shop_info_account_tag {
-					display: inline-block;
-					margin-right: 8px;
-					text-align: center;
-					border-radius: 10px;
-					width: 40px;
-					color: #FFFFFF;
-					background:  linear-gradient(45deg, #5793FA, #5758FA);
+			.shop_account_icons_wrapper {
+				display: flex;
+				padding: 16px 0;
+				align-items: stretch;
+				.icon_wrapper {
+					flex-grow: 1;
+					.icon_title {
+						color: #333333;
+						font-size: 12px;
+						text-align: center;
+					}
+				}
+			}
+		}
+		.shop_setting_wrapper {
+			margin-top: 18px;
+			.shop_setting_title {
+				color: #333333;
+				font-size: 18px;
+				font-weight: 600;
+			}
+			.shop_setting_content_wrapper {
+				display: flex;
+				padding: 16px 0;
+				align-items: stretch;
+				.icon_wrapper {
+					flex-grow: 1;
+					.icon_title {
+						color: #333333;
+						font-size: 12px;
+						text-align: center;
+					}
 				}
 			}
 		}
 	}
-	.shop_account_wrapper {
-		margin-top: 18px;
-		.shop_account_title {
-			color: #333333;
-			font-size: 18px;
-			font-weight: 600;
-		}
-		.shop_account_icons_wrapper {
-			display: flex;
-			padding: 16px 0;
-			align-items: stretch;
-			.icon_wrapper {
-				flex-grow: 1;
-				.icon_title {
-					color: #333333;
-					font-size: 12px;
-					text-align: center;
-				}
-			}
-		}
-	}
-	.shop_setting_wrapper {
-		margin-top: 18px;
-		.shop_setting_title {
-			color: #333333;
-			font-size: 18px;
-			font-weight: 600;
-		}
-		.shop_setting_content_wrapper {
-			display: flex;
-			padding: 16px 0;
-			align-items: stretch;
-			.icon_wrapper {
-				flex-grow: 1;
-				.icon_title {
-					color: #333333;
-					font-size: 12px;
-					text-align: center;
-				}
-			}
-		}
-	}
-}
 </style>

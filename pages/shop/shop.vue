@@ -272,21 +272,21 @@
 </script>
 
 <style lang="scss" scoped>
-.shop_info_title, .shop_owner_info_title {
-	margin-top: 21px;
-	margin-left: 18px;
-	margin-bottom: 16px;
-	color: #333333;
-	font-size: 18px;
-}
-.img_uploader_ins {
-	margin-top: 8px;
-	margin-bottom: 16px;
-	text-align: center;
-	font-size: 14px;
-	color: #999999;
-}
-.my_btn {
-	margin: 48px 16px 0px 16px;
-}
+	.shop_info_title, .shop_owner_info_title {
+		margin-top: 21px;
+		margin-left: 18px;
+		margin-bottom: 16px;
+		color: #333333;
+		font-size: 18px;
+	}
+	.img_uploader_ins {
+		margin-top: 8px;
+		margin-bottom: 16px;
+		text-align: center;
+		font-size: 14px;
+		color: #999999;
+	}
+	.my_btn {
+		margin: 48px 16px 0px 16px;
+	}
 </style>

@@ -36,25 +36,25 @@
 </script>
 
 <style lang="scss" scoped>
-.mini_cal_wrapper {
-	display: flex;
-	overflow: hidden;
-	padding: 0 16px;
-	height: 34px;
-	background-color: #FFFFFF;
-	box-shadow: 0 2px 4px 0 rgba(220, 231, 250, .7);
-}
-.mini_cal_context {
-	width: 100%;
-	margin: auto 0;
-}
-.mini_cal_left_wrapper {
-	float: left;
-}
-.mini_cal_right_wrapper {
-	float: right;
-}
-.date_wrapper {
-	margin-left: 8px;
-}
+	.mini_cal_wrapper {
+		display: flex;
+		overflow: hidden;
+		padding: 0 16px;
+		height: 34px;
+		background-color: #FFFFFF;
+		box-shadow: 0 2px 4px 0 rgba(220, 231, 250, .7);
+	}
+	.mini_cal_context {
+		width: 100%;
+		margin: auto 0;
+	}
+	.mini_cal_left_wrapper {
+		float: left;
+	}
+	.mini_cal_right_wrapper {
+		float: right;
+	}
+	.date_wrapper {
+		margin-left: 8px;
+	}
 </style>

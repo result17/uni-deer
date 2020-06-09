@@ -55,8 +55,8 @@
 </script>
 
 <style lang="scss" scoped>
-.full_screen {
-	width: 100vw;
-	height: 100vh;
-}
+	.full_screen {
+		width: 100vw;
+		height: 100vh;
+	}
 </style>

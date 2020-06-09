@@ -73,39 +73,39 @@
 </script>
 
 <style lang="scss" scoped>
-.goods_rank_item_wrapper {
-	background-color: #FFFFFF;
-	box-shadow: 0 2px 8px 0 rgba(220,231,250,0.50);
-	.col_wrapper {
-		position: relative;
-		height: 68px;
+	.goods_rank_item_wrapper {
+		background-color: #FFFFFF;
+		box-shadow: 0 2px 8px 0 rgba(220,231,250,0.50);
+		.col_wrapper {
+			position: relative;
+			height: 68px;
+		}
 	}
-}
-.center {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-.rank_num {
-	width: 18px;
-	height: 18px;
-	border-radius: 999px;
-	text-align: center;
-}
-.name_wrapper {
-	color: #333333;
-	font-size: 12px;
-	white-space: nowrap;
-	margin-bottom: 8px;
-	font-weight: 600;
-}
-.sub_wrapper, .grey_font {
-	color: #999999;
-	font-size: 12px;
-	white-space: nowrap;
-}
-.up_content {
-	margin-bottom: 8px;
-}
+	.center {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.rank_num {
+		width: 18px;
+		height: 18px;
+		border-radius: 999px;
+		text-align: center;
+	}
+	.name_wrapper {
+		color: #333333;
+		font-size: 12px;
+		white-space: nowrap;
+		margin-bottom: 8px;
+		font-weight: 600;
+	}
+	.sub_wrapper, .grey_font {
+		color: #999999;
+		font-size: 12px;
+		white-space: nowrap;
+	}
+	.up_content {
+		margin-bottom: 8px;
+	}
 </style>

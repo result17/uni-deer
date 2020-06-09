@@ -51,8 +51,8 @@
 </script>
 
 <style lang="scss" scoped>
-.search-wrapper {
-	width: calc(100% - 44px);
-	margin: 8px 0 0 44px;
-}
+	.search-wrapper {
+		width: calc(100% - 44px);
+		margin: 8px 0 0 44px;
+	}
 </style>

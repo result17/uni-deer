@@ -77,45 +77,45 @@
 </script>
 
 <style lang="scss" scoped>
-.status_order_item_wrapper {
-	width: 100%;
-	height: auto;
-	background-color: #FFFFFF;
-	font-size: 14px;
-	padding: 16px;
-	box-shadow: 0 2px 8px 0 rgba(220, 231, 250, .7);
-	border-radius: 8px;
-	margin-top: 8px;
-}
-.head_wrapper, .footer_wrapper {
-	overflow: hidden;
-}
-.footer_left_wrapper {
-	float: left;
-}
-.head_left_wrapper {
-	@extend .footer_left_wrapper;
-	margin-bottom: 8px;
-}
-.head_right_wrapper, .footer_right_wrapper {
-	float: right;
-}
-.phone {
-	margin-right: 8px;
-}
-.notPayed {
-	color: #FF4759;
-	font-size: 12px;
-}
-.payed {
-	font-size: 12px;
-}
-.fullAdress {
-	clear: both;
-	font-size: 12px;
-	color: #999999;
-}
-.area {
-	margin-right: 8px;
-}
+	.status_order_item_wrapper {
+		width: 100%;
+		height: auto;
+		background-color: #FFFFFF;
+		font-size: 14px;
+		padding: 16px;
+		box-shadow: 0 2px 8px 0 rgba(220, 231, 250, .7);
+		border-radius: 8px;
+		margin-top: 8px;
+	}
+	.head_wrapper, .footer_wrapper {
+		overflow: hidden;
+	}
+	.footer_left_wrapper {
+		float: left;
+	}
+	.head_left_wrapper {
+		@extend .footer_left_wrapper;
+		margin-bottom: 8px;
+	}
+	.head_right_wrapper, .footer_right_wrapper {
+		float: right;
+	}
+	.phone {
+		margin-right: 8px;
+	}
+	.notPayed {
+		color: #FF4759;
+		font-size: 12px;
+	}
+	.payed {
+		font-size: 12px;
+	}
+	.fullAdress {
+		clear: both;
+		font-size: 12px;
+		color: #999999;
+	}
+	.area {
+		margin-right: 8px;
+	}
 </style>

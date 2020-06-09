@@ -85,49 +85,49 @@
 </script>
 
 <style lang="scss" scoped>
-::-webkit-scrollbar {
-	display: none;
-	width: 0 !important;
-	height: 0 !important;
-	-webkit-appearance: none;
-	background: transparent;
-}
-.my_tabs_wrapper {
-	width: calc(100vw - 32px);
-	height: 80px;
-	border-radius: 8px;
-	box-shadow: 0 2px 8px 0 rgba(220,231,250, .7);
-	background-color: #FFFFFF;
-	margin-bottom: 8px;
-}
-.scroll_view {
-	position: relative;
-	width: 100%;
-	white-space: nowrap;
-}
-.my_tabs_scroll_box {
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-}
-.my_tabs_item {
-	flex: 1;
-	display: inline-block;
-	height: 80px;
-	line-height: 80px;
-	text-align: center;
-	position: relative;
-}
-.tabs_item_img_wrapper {
-	position: absolute;
-	left: 50%;
-	top: 21px;
-	transform: translateX(-50%);
-}
-.tabs_item_ins {
-	position: absolute;
-	left: 50%;
-	bottom: -16px;
-	transform: translateX(-50%);
-}
+	::-webkit-scrollbar {
+		display: none;
+		width: 0 !important;
+		height: 0 !important;
+		-webkit-appearance: none;
+		background: transparent;
+	}
+	.my_tabs_wrapper {
+		width: calc(100vw - 32px);
+		height: 80px;
+		border-radius: 8px;
+		box-shadow: 0 2px 8px 0 rgba(220,231,250, .7);
+		background-color: #FFFFFF;
+		margin-bottom: 8px;
+	}
+	.scroll_view {
+		position: relative;
+		width: 100%;
+		white-space: nowrap;
+	}
+	.my_tabs_scroll_box {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+	.my_tabs_item {
+		flex: 1;
+		display: inline-block;
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
+		position: relative;
+	}
+	.tabs_item_img_wrapper {
+		position: absolute;
+		left: 50%;
+		top: 21px;
+		transform: translateX(-50%);
+	}
+	.tabs_item_ins {
+		position: absolute;
+		left: 50%;
+		bottom: -16px;
+		transform: translateX(-50%);
+	}
 </style>
