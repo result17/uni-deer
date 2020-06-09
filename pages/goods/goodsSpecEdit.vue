@@ -110,9 +110,6 @@
 			}
 		}
 	}
-	.goods_swiper_edit_wrapper {
-		// 
-	}
 }
 .modal_content {
 	margin: 16px 36px;

@@ -57,6 +57,7 @@
 			},
 			rotateStep() {
 				clearTimeout(this.timerId)
+				if (!this.isRotating) return
 				this.rotateDeg += this.rotateDir * this.degStep
 				if (this.isRotating && this.rotateDir === -1 && this.rotateDeg !== -180) {
 					// 反转封面中

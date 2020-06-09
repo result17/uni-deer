@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="stat_header_wrapper">
-			<image :style="{ width: '100%', height: '72px'}" src="/static/imgs/statistic/statistic_bg.png" mode="heightFix"></image>
+			<image :style="{ width: '100%', height: '72px'}" src="/static/imgs/statistic/statistic_bg.png" mode="aspectFill"></image>
 			<view class="stat_header">
 				统计
 			</view>
@@ -10,7 +10,7 @@
 			<view class="stat_info">
 				<view class="neworder_wrapper">
 					<view class="stat_info_content_wrapper">
-						<image :style="{width: '40px', height: '40px', marginLeft: '10px'}" src="../../static/imgs/statistic/xdd.png" mode="aspectFit"></image>
+						<image :style="{width: '40px', height: '40px', marginLeft: '10px'}" src="/static/imgs/statistic/xdd.png" mode="aspectFit"></image>
 						<view class="stat_info_title">
 							新订单(单)
 						</view>
@@ -21,7 +21,7 @@
 				</view>
 				<view class="todeliver_wrapper">
 					<view class="stat_info_content_wrapper">
-						<image :style="{width: '40px', height: '40px', marginLeft: '10px'}" src="../../static/imgs/statistic/dps.png" mode="aspectFit"></image>
+						<image :style="{width: '40px', height: '40px', marginLeft: '10px'}" src="/static/imgs/statistic/dps.png" mode="aspectFit"></image>
 						<view class="stat_info_title">
 							待配送(单)
 						</view>
@@ -32,7 +32,7 @@
 				</view>
 				<view class="today_total_amount_wrapper">
 					<view class="stat_info_content_wrapper">
-						<image :style="{width: '40px', height: '40px', marginLeft: '20px'}" src="../../static/imgs/statistic/jrjye.png" mode="aspectFit"></image>
+						<image :style="{width: '40px', height: '40px', marginLeft: '20px'}" src="/static/imgs/statistic/jrjye.png" mode="aspectFit"></image>
 						<view class="stat_info_title">
 							今日交易额(元)
 						</view>
