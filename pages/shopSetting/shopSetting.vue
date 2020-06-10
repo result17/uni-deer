@@ -22,7 +22,6 @@
 						placeholder="零食铺子坚果饮料美酒..."
 						placeholder-style="color: #ccc; font-size: 14px;"
 						right-icon="arrow-right"
-						:disabled="true"
 					>
 					</u-field>
 					<u-field
@@ -31,7 +30,6 @@
 						placeholder="假一赔十"
 						placeholder-style="color: #ccc; font-size: 14px;"
 						right-icon="arrow-right"
-						:disabled="true"
 					>
 					</u-field>
 					<u-field
@@ -40,7 +38,6 @@
 						placeholder="在线支付"
 						placeholder-style="color: #ccc; font-size: 14px;"
 						right-icon="arrow-right"
-						:disabled="true"
 					>
 					</u-field>
 				</u-cell-group>
@@ -56,7 +53,6 @@
 								placeholder="运费比例配置"
 								placeholder-style="color: #ccc; font-size: 14px;"
 								right-icon="arrow-right"
-								:disabled="true"
 							>
 							</u-field>
 							<u-field
@@ -65,7 +61,6 @@
 								placeholder="0.00"
 								placeholder-style="color: #ccc; font-size: 14px;"
 								right-icon="arrow-right"
-								:disabled="true"
 							>
 							</u-field>
 							<u-field
@@ -74,7 +69,6 @@
 								placeholder="0.00"
 								placeholder-style="color: #ccc; font-size: 14px;"
 								right-icon="arrow-right"
-								:disabled="true"
 							>
 							</u-field>
 						</u-cell-group>
@@ -90,7 +84,6 @@
 								v-model="phone"
 								label="联系电话"
 								right-icon="arrow-right"
-								:disabled="true"
 							>
 							</u-field>
 							<u-field
@@ -98,7 +91,7 @@
 								v-model="shopAddress"
 								label="店铺地址"
 								right-icon="arrow-right"
-								:disabled="true"
+								:disabled="false"
 							>
 							</u-field>
 						</u-cell-group>

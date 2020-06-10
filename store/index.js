@@ -13,6 +13,9 @@ const store = new Vuex.Store({
 		login(state) {
 			state.isLogin = true
 		},
+		logout(state) {
+			state.isLogin = false
+		},
 		changeShowPayMethodsList(state) {
 			state.showPayMethodsList = !state.showPayMethodsList
 		}

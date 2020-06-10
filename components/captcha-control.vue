@@ -14,8 +14,8 @@
 			<image :style="{marginRight: '8px', width: '16px', height: '16px'}" src="../static/imgs/login/qyg_shop_icon_delete.png"></image>
 		</view>
 		<view class="captcha_get_wrapper">
-			<span v-if="hasSentCaptchaReqSec === 0" class="captcha_get_btn" @click="onGetCaptchaBtnClick">{{this.hasSentCaptchaReq ? '重新获取' : '获取验证码'}}</span>
-			<span v-if="hasSentCaptchaReqSec > 0" class="captcha_sent_btn">已发送{{this.hasSentCaptchaReqSec}}秒</span>
+			<span v-if="hasSentCaptchaReqSec === 0" class="captcha_get_btn" @click="onGetCaptchaBtnClick">{{hasSentCaptchaReq ? '重新获取' : '获取验证码'}}</span>
+			<span v-if="hasSentCaptchaReqSec > 0" class="captcha_sent_btn">已发送{{hasSentCaptchaReqSec}}秒</span>
 		</view>
 	</view>
 </template>

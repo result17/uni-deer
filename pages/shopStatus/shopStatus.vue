@@ -3,7 +3,7 @@
 		<view class="icon_bar">
 			<view class="right">
 				<u-icon class="bell" name="bell" size="48" @click="onBellIconClick"></u-icon>
-				<u-icon class="setting" name="setting" size="48"></u-icon>
+				<u-icon class="setting" name="setting" size="48" @click="onSettingIconClick"></u-icon>
 			</view>
 		</view>
 		<view class="shop_info_wrapper">
@@ -99,8 +99,13 @@
 				uni.navigateTo({
 					url: '../shopSetting/shopSetting'
 				})
+			},
+			onSettingIconClick() {
+				uni.navigateTo({
+					url: '../baseSetting/baseSetting'
+				})
 			}
-		}
+		},
 	}
 </script>
 

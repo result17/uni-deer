@@ -89,6 +89,10 @@
 				"navigationStyle": "custom"
 			}
         }
+        ,{
+            "path" : "pages/baseSetting/baseSetting",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
