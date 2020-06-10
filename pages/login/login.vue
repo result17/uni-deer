@@ -34,6 +34,7 @@
 				<span class="sign_up_link" @click="onSignUpLinkClick">还没账号？ 快去注册</span>
 			</div>
 		</view>
+		<u-toast ref="uToast" />
 	</view>
 </template>
 
@@ -50,7 +51,10 @@
 				password: '',
 			};
 		},
-	    methods: {
+		onReady() {
+			this.showToast()
+		},
+		methods: {
 			onAccountDeleteClick() {
 				this.account = ''
 			},
@@ -77,14 +81,23 @@
 					url: '../shop/shop'
 				})
 				this.$store.commit('login')
+			},
+			showToast() {
+				this.$refs.uToast.show({
+					title: '账号和密码无限制，都不为空即可',
+					icon: false,
+					position: 'bottom',
+					duration: 3000,
+					type: 'default'
+				})
 			}
-		},
+	  },
 		computed: {
 			complete() {
 				return !(this.account && this.password)
 			}
 		}
-	}
+}
 </script>
 
 <style lang="scss" scoped>
