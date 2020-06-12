@@ -8,19 +8,16 @@
 | ![](./images/5.jpg)    |  ![](./images/6.jpg)    | ![](./images/7.jpg)   |  ![](./images/8.jpg)   |
 | ![](./images/9.jpg)    |  ![](./images/10.jpg)   | ![](./images/11.jpg)   | ![](./images/12.jpg)  |
 | ![](./images/13.jpg)    |  ![](./images/14.jpg)   | ![](./images/15.jpg)   | ![](./images/16.jpg)  |
-
-### fix
-修改了u-action-sheet的源码
-```css
-.u-action-sheet-item {
-		display: flex;
-		line-height: 1;
-		justify-content: left;
-		margin-left: 20rpx;
-		align-items: center;
-		font-size: 34rpx;
-		padding: 34rpx 0;
-}
-```
+### 实现内容
+- 使用vuex实现全局状态管理
+- 验证码输入框
+- 应用引导页
+- tabs-swiper
+- 遮罩层菜单
+- 地图定位功能（使用uni-app内置功能，h5端和小程序端使用的是腾讯地图，安卓app端使用的是高德地图）
+- 列表功能
+- uCharts实现圆环图
+- 3D翻转动画，数字滚动效果
+- 动态计算列表长度
 ### helpme
 仓库的[helpme](./HELPME.md)文档记录编码时遇到的问题和解决方法。
