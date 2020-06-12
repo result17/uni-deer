@@ -2,6 +2,7 @@
 感谢[flutter deer](https://github.com/simplezhli/flutter_deer/)提供的设计图和图片素材。<br>
 感谢[uview](https://github.com/YanxinNet/uView)，简洁好用的组件不仅有出色的使用体验，其代码也对此项目起到了参考作用。(如components/order-swiper）
 ### images
+**安卓app端实际运行截图**
 | ![](./images/1.jpg)    |  ![](./images/2.jpg)    | ![](./images/3.jpg)   |  ![](./images/4.jpg)   |
 | :--------------------------------: | :---------------------------------: | :-------------------------------: | :-------------------------------:  |
 | ![](./images/5.jpg)    |  ![](./images/6.jpg)    | ![](./images/7.jpg)   |  ![](./images/8.jpg)   |
